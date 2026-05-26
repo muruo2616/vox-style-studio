@@ -2,7 +2,7 @@
   "version": "0.1",
   "enabled": true,
   "provider": "github-issues",
-  "githubRepo": "muro02616/vox-style-studio",
+  "githubRepo": "muruo2616/vox-style-studio",
   "labels": ["feedback", "vox-style-report"],
   "fallbackUrl": "docs/feedback-setup.md",
   "feedbackTypes": [

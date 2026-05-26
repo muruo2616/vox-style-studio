@@ -4,14 +4,14 @@
 
 ## 启用步骤
 
-1. 将项目发布到 GitHub 仓库，例如 `muro02616/vox-style-studio`。
+1. 将项目发布到 GitHub 仓库，例如 `muruo2616/vox-style-studio`。
 2. 打开仓库的 Issues 功能。
 3. 编辑 `data/feedback-config.json`。
 4. 将 `githubRepo` 从空字符串改为你的仓库名：
 
 ```json
 {
-  "githubRepo": "muro02616/vox-style-studio"
+  "githubRepo": "muruo2616/vox-style-studio"
 }
 ```
 
