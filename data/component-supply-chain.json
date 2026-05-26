@@ -1,0 +1,172 @@
+{
+  "version": "0.3.3",
+  "updated": "2026-05-25",
+  "methodology": "四层拆解：原材料/基础材料 → 工序与子件 → 零部件总成 → 整机关节模组。价值量与国产化数据为产业研究映射，非财报口径。",
+  "chains": {
+    "reducer": {
+      "layers": [
+        { "tier": "upstream", "label": "上游 · 原材料", "items": ["特种合金钢（齿坯）", "轴承钢 / 滚子材料", "柔轮用不锈钢薄壁管", "润滑油与密封橡胶"] },
+        { "tier": "midstream", "label": "中游 · 加工与子件", "items": ["精锻 / 机加工齿坯", "柔轮冲压与热处理", "刚轮磨齿", "交叉滚子轴承装配", "整机厂减速器标定"] },
+        { "tier": "downstream", "label": "下游 · 在机位置", "items": ["谐波/行星减速器模组", "肩肘腕髋膝等旋转关节", "与无框电机同轴集成"] }
+      ],
+      "importDependency": "高端交叉滚子轴承、部分柔轮材料仍依赖日德供应链",
+      "cnStrength": "绿的谐波：柔轮工艺与工装；双环/中大力德：齿轮规模化与 RV 协同",
+      "bottleneck": "热处理变形控制、批量一致性、ASP 价格战",
+      "costDriver": "材料占比中等，精密加工与检测工时占比高"
+    },
+    "torque-motor": {
+      "layers": [
+        { "tier": "upstream", "label": "上游 · 原材料", "items": ["硅钢片 / 电工钢", "永磁体（钕铁硼）", "漆包线 / 电磁线", "绝缘材料与轴承"] },
+        { "tier": "midstream", "label": "中游 · 加工与子件", "items": ["定转子冲叠", "绕线浸漆", "动平衡", "无框定子灌封", "驱动器匹配"] },
+        { "tier": "downstream", "label": "下游 · 在机位置", "items": ["髋/肩大扭矩关节直驱或一级传动", "与减速器方案竞争共存"] }
+      ],
+      "importDependency": "高性能永磁体、部分高端轴承进口比例仍高",
+      "cnStrength": "鸣志：空心杯与无框品类布局；汇川：伺服平台与渠道",
+      "bottleneck": "温升、扭矩密度、批量标定",
+      "costDriver": "永磁体与铜线价格波动敏感"
+    },
+    "leadscrew": {
+      "layers": [
+        { "tier": "upstream", "label": "上游 · 原材料", "items": ["轴承钢 / 研磨棒材", "螺母用青铜或工程塑料", "表面处理药剂"] },
+        { "tier": "midstream", "label": "中游 · 加工与子件", "items": ["丝杠磨削 / 轧制", "滚柱加工与筛选", "螺母注塑或机加", "预紧与精度检测"] },
+        { "tier": "downstream", "label": "下游 · 在机位置", "items": ["膝踝腕线性关节", "推杆式执行器"] }
+      ],
+      "importDependency": "高精度研磨设备与工艺 Know-how 部分依赖进口",
+      "cnStrength": "北特：行星滚柱丝杠布局；秦川等机床链协同",
+      "bottleneck": "精度保持、寿命与产能爬坡",
+      "costDriver": "磨削工时与良率决定成本"
+    },
+    "hollow-cup-motor": {
+      "layers": [
+        { "tier": "upstream", "label": "上游 · 原材料", "items": ["微型硅钢 / 坡莫合金", "微型轴承", "细漆包线"] },
+        { "tier": "midstream", "label": "中游 · 加工与子件", "items": ["空心杯绕线", "微型齿轮箱（可选）", "手指模组集成"] },
+        { "tier": "downstream", "label": "下游 · 在机位置", "items": ["灵巧手指关节", "仿生微传动"] }
+      ],
+      "importDependency": "高端空心杯绕线设备与工艺",
+      "cnStrength": "鸣志、兆威：微电机与微传动",
+      "bottleneck": "订单能见度低、与无框方案重叠",
+      "costDriver": "手工/半自动装配占比高"
+    },
+    "force-sensor": {
+      "layers": [
+        { "tier": "upstream", "label": "上游 · 原材料", "items": ["应变计 / 弹性体金属箔", "粘接胶与封装树脂", "信号调理芯片"] },
+        { "tier": "midstream", "label": "中游 · 加工与子件", "items": ["弹性体加工", "应变片贴装", "标定与温度补偿", "六维解耦算法"] },
+        { "tier": "downstream", "label": "下游 · 在机位置", "items": ["腕踝六维力矩传感", "协作臂末端力控"] }
+      ],
+      "importDependency": "高端应变计与标定台仍部分进口",
+      "cnStrength": "柯力：力传感平台与多品类",
+      "bottleneck": "标定一致性、出货量小",
+      "costDriver": "标定工时与良率"
+    },
+    "tactile-sensor": {
+      "layers": [
+        { "tier": "upstream", "label": "上游 · 原材料", "items": ["柔性基底（PI/PET）", "导电高分子 / 纳米银", "封装硅胶与皮肤基材"] },
+        { "tier": "midstream", "label": "中游 · 加工与子件", "items": ["丝网印刷 / 蒸镀电极", "阵列布局设计", "封装与耐久测试"] },
+        { "tier": "downstream", "label": "下游 · 在机位置", "items": ["指尖/手掌触觉阵列", "仿生皮肤压力通道"] }
+      ],
+      "importDependency": "高端导电材料与检测设备",
+      "cnStrength": "汉威/能斯达：柔性微纳压力叙事与样品能力",
+      "bottleneck": "耐久、标定、订单披露少",
+      "costDriver": "材料与定制封装，规模效应未起"
+    },
+    "vision-3d": {
+      "layers": [
+        { "tier": "upstream", "label": "上游 · 原材料", "items": ["光学玻璃 / 塑料透镜", "CMOS 图像传感器", "激光器 / VCSEL（结构光）", "PCB 与连接器"] },
+        { "tier": "midstream", "label": "中游 · 加工与子件", "items": ["镜头组装", "传感器贴装", "标定与内参出厂", "SDK 与驱动"] },
+        { "tier": "downstream", "label": "下游 · 在机位置", "items": ["头部/胸部 2–6 路深度相机", "抓取与导航感知"] }
+      ],
+      "importDependency": "高端 CMOS、部分激光器依赖全球供应链",
+      "cnStrength": "奥比中光：3D 视觉模组与量产",
+      "bottleneck": "整机自研视觉、价格战",
+      "costDriver": "传感器与光学件占 BOM 大头"
+    },
+    "controller": {
+      "layers": [
+        { "tier": "upstream", "label": "上游 · 原材料", "items": ["功率半导体（IGBT/SiC）", "MCU / FPGA", "电容电感 PCB", "壳体铝型材"] },
+        { "tier": "midstream", "label": "中游 · 加工与子件", "items": ["SMT 贴片", "功率模块封装", "固件与运动控制算法", "安全联锁与通信栈"] },
+        { "tier": "downstream", "label": "下游 · 在机位置", "items": ["主控柜、多轴伺服驱动器", "连接上层规划与关节"] }
+      ],
+      "importDependency": "高端功率器件、部分 MCU 仍进口",
+      "cnStrength": "汇川、埃斯顿：伺服与控制平台",
+      "bottleneck": "标准分裂、开源栈、毛利压力",
+      "costDriver": "芯片与功率模块价格波动"
+    },
+    "edge-compute": {
+      "layers": [
+        { "tier": "upstream", "label": "上游 · 原材料", "items": ["GPU/SoC 晶圆", "存储器", "载板与被动件", "散热模组材料"] },
+        { "tier": "midstream", "label": "中游 · 加工与子件", "items": ["模组贴装", "散热设计", "边缘推理软件栈", "整机厂系统集成"] },
+        { "tier": "downstream", "label": "下游 · 在机位置", "items": ["胸腔算力仓 Jetson/国产 NPU", "感知融合与规划"] }
+      ],
+      "importDependency": "高端 GPU 供应与功耗散热",
+      "cnStrength": "A 股多为分销/集成映射，非晶圆厂",
+      "bottleneck": "芯片供应、整机自研",
+      "costDriver": "芯片占绝对主导"
+    },
+    "structure": {
+      "layers": [
+        { "tier": "upstream", "label": "上游 · 原材料", "items": ["铝合金锭 / 镁合金", "碳纤维预浸料", "紧固件与密封件"] },
+        { "tier": "midstream", "label": "中游 · 加工与子件", "items": ["压铸 / CNC", "表面处理", "线束预制", "执行器壳体总成"] },
+        { "tier": "downstream", "label": "下游 · 在机位置", "items": ["躯干四肢结构", "一体化执行器外罩"] }
+      ],
+      "importDependency": "高端碳纤维、部分压铸模具",
+      "cnStrength": "拓普：汽车结构件与客户关系",
+      "bottleneck": "人形收入占比低、重资产",
+      "costDriver": "材料+模具摊销"
+    },
+    "thermal": {
+      "layers": [
+        { "tier": "upstream", "label": "上游 · 原材料", "items": ["铜管 / 铝冷板", "制冷剂", "阀件橡胶密封"] },
+        { "tier": "midstream", "label": "中游 · 加工与子件", "items": ["换热器钎焊", "电子膨胀阀", "泵阀组装", "系统回路设计"] },
+        { "tier": "downstream", "label": "下游 · 在机位置", "items": ["关节散热、电池与算力液冷"] }
+      ],
+      "importDependency": "部分高端阀件",
+      "cnStrength": "三花：全球热管理龙头基本盘",
+      "bottleneck": "区分汽车 vs 机器人方案收入",
+      "costDriver": "铜价与阀件规模"
+    },
+    "oem-assembly": {
+      "layers": [
+        { "tier": "upstream", "label": "上游 · 输入", "items": ["来料零部件包", "测试治具", "工装夹具"] },
+        { "tier": "midstream", "label": "中游 · 制造", "items": ["SMT/组装", "整机联调", "老化与安规测试", "包装物流"] },
+        { "tier": "downstream", "label": "下游 · 交付", "items": ["品牌整机 OEM/ODM", "工厂部署或出货"] }
+      ],
+      "importDependency": "关键零部件仍可能进口",
+      "cnStrength": "立讯：精密制造与苹果链能力外溢",
+      "bottleneck": "调研口径≠财报收入",
+      "costDriver": "人工+折旧+良率"
+    },
+    "myofiber": {
+      "layers": [
+        { "tier": "upstream", "label": "上游 · 原材料", "items": ["弹性体聚合物", "编织纤维", "液压介质"] },
+        { "tier": "midstream", "label": "中游 · 加工与子件", "items": ["纤维束成型", "一致性收缩测试", "与泵阀回路匹配"] },
+        { "tier": "downstream", "label": "下游 · 在机位置", "items": ["Clone 全身 1000+ 肌纤维执行", "替代电机+减速器范式"] }
+      ],
+      "importDependency": "材料配方与工艺 Know-how 主要在海外整机",
+      "cnStrength": "材料厂可映射，尚无规模 A 股龙头",
+      "bottleneck": "技术证伪、悬挂依赖",
+      "costDriver": "研发与小批量定制"
+    },
+    "micro-hydraulic": {
+      "layers": [
+        { "tier": "upstream", "label": "上游 · 原材料", "items": ["铝合金阀体", "密封橡胶 / FFKM", "微型电机"] },
+        { "tier": "midstream", "label": "中游 · 加工与子件", "items": ["精密机加阀芯", "比例阀标定", "泵阀集成", "泄漏测试"] },
+        { "tier": "downstream", "label": "下游 · 在机位置", "items": ["仿生液压回路 1–4 套", "Myofiber 动力源"] }
+      ],
+      "importDependency": "高端密封件与微型泵",
+      "cnStrength": "中鼎、富创、亚德客等汽车液压外推",
+      "bottleneck": "可靠性、量产工艺未验证",
+      "costDriver": "精密加工与密封件"
+    },
+    "polymer-bone": {
+      "layers": [
+        { "tier": "upstream", "label": "上游 · 原材料", "items": ["工程塑料粒子", "光敏树脂", "金属粉末（间接）"] },
+        { "tier": "midstream", "label": "中游 · 加工与子件", "items": ["SLS/FDM 打印", "后处理与强化", "关节副嵌件"] },
+        { "tier": "downstream", "label": "下游 · 在机位置", "items": ["206 节聚合物骨骼", "轻量化仿生骨架"] }
+      ],
+      "importDependency": "高端打印设备与材料",
+      "cnStrength": "铂力特、华曙：增材设备与工艺",
+      "bottleneck": "强度疲劳、量产节拍",
+      "costDriver": "设备折旧+材料"
+    }
+  }
+}

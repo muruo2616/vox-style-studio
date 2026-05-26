@@ -1,0 +1,22 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Secrets
+.env
+.env.*
+*.pem
+
+# Local extracts / scratch
+_thesis_extract/
+docx_extract.txt
+
+# Personal materials (not part of public report site)
+入党积极分子培训文字材料.md
+知识产权学院分党校*.md
+
+# Node (if added later)
+node_modules/

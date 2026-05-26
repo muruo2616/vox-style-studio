@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>人形机器人产业链 · 发布入口</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>人形机器人产业链 <span class="tag">v0.3.6</span></h1>
+    <nav aria-label="报告入口">
+      <a href="clone-robotics-report.html#tab=routes">最新版交互报告</a>
+      <a href="clone-robotics-report.md">Markdown 版</a>
+      <a href="docs/release-v0.3.6.md">v0.3.6 发布说明</a>
+      <a href="docs/old-report.html">旧版备份</a>
+      <a href="docs/v0.2-to-v0.3-migration.md">迁移说明</a>
+      <a href="data/components.json">components.json</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="banner">
+      本页为发布入口：优先打开
+      <a href="clone-robotics-report.html#tab=routes">最新版交互报告 v0.3.6</a>。
+      <code>data/*.json</code> 为结构化数据层，<code>docs/old-report.html</code> 仅作为旧版备份。
+    </p>
+
+    <section class="card" aria-labelledby="data-heading">
+      <h2 id="data-heading">数据层状态</h2>
+      <p style="margin:0 0 0.75rem;font-size:0.85rem;color:#64748b">
+        已接入 <strong id="components-count">—</strong> 个零部件（components.json）。其余 JSON 用于后续 Tab 迁移。
+      </p>
+      <div id="data-status">加载中…</div>
+    </section>
+
+    <section class="card" aria-labelledby="routes-heading">
+      <h2 id="routes-heading">技术路线 · 落地预览</h2>
+      <p style="margin:0 0 0.75rem;font-size:0.85rem;color:#64748b">
+        与最新版 <code>#tab=routes</code> 三张洞察卡同源文案；完整 §1–§5 见
+        <a href="clone-robotics-report.html#tab=routes">交互报告 · 技术路线 Tab</a>。
+      </p>
+      <div id="routes-preview"></div>
+    </section>
+  </main>
+
+  <footer>
+    非投资建议 · 数据见 data/ 与 sources.yaml · 发布说明：<a href="docs/release-v0.3.6.md">v0.3.6</a>
+  </footer>
+  <script type="module" src="assets/app.js"></script>
+  <script src="assets/feedback.js"></script>
+</body>
+</html>

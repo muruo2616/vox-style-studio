@@ -1,0 +1,91 @@
+{
+  "version": "1.1",
+  "updated": "2026-05-25",
+  "model": "thematic_v1",
+  "computeFormula": "score = round(0.35×relevance + 0.30×visibility + 0.20×elasticity + 0.15×quality)",
+  "weights": {
+    "relevance": 0.35,
+    "visibility": 0.30,
+    "elasticity": 0.20,
+    "quality": 0.15
+  },
+  "factorLabels": {
+    "relevance": "产业相关度",
+    "visibility": "量产能见度",
+    "elasticity": "估值弹性",
+    "quality": "质量确定性"
+  },
+  "factorRubrics": {
+    "relevance": {
+      "90-100": "人形/机器人收入占比高或为核心客户一级供应商",
+      "70-89": "明确供货关系或同类 BOM 已量产",
+      "50-69": "技术同构、客户未披露",
+      "below50": "主题映射、无订单"
+    },
+    "visibility": {
+      "90-100": "出货量/订单可交叉验证（Tier1-2）",
+      "70-89": "调研/媒体一致预期",
+      "50-69": "路线图清晰、出货未验证",
+      "below50": "原型/预购/传闻"
+    },
+    "elasticity": {
+      "90-100": "机器人业务占比低、利润弹性大",
+      "70-89": "中等占比、有提价或渗透率逻辑",
+      "50-69": "大盘蓝筹、弹性一般",
+      "below50": "已充分定价"
+    },
+    "quality": {
+      "90-100": "龙头地位+财务稳健+客户多元",
+      "70-89": "细分龙头或高 ROE",
+      "50-69": "成长型、盈利波动",
+      "below50": "高估值+订单未兑现"
+    }
+  },
+  "companyFactors": {
+    "luxshare": { "relevance": 95, "visibility": 95, "elasticity": 85, "quality": 88 },
+    "hanwei": { "relevance": 88, "visibility": 52, "elasticity": 90, "quality": 68 },
+    "leader": { "relevance": 92, "visibility": 88, "elasticity": 82, "quality": 90 },
+    "tuopu": { "relevance": 88, "visibility": 85, "elasticity": 82, "quality": 85 },
+    "sanhua": { "relevance": 80, "visibility": 82, "elasticity": 78, "quality": 86 },
+    "mingzhi": { "relevance": 82, "visibility": 78, "elasticity": 75, "quality": 82 },
+    "keli": { "relevance": 78, "visibility": 72, "elasticity": 70, "quality": 80 },
+    "inovance": { "relevance": 85, "visibility": 88, "elasticity": 75, "quality": 88 },
+    "estun": { "relevance": 80, "visibility": 82, "elasticity": 72, "quality": 78 },
+    "tzcl": { "relevance": 70, "visibility": 68, "elasticity": 65, "quality": 78 },
+    "zhaowei": { "relevance": 74, "visibility": 58, "elasticity": 85, "quality": 68 },
+    "orbbec": { "relevance": 74, "visibility": 65, "elasticity": 78, "quality": 72 },
+    "leisai": { "relevance": 68, "visibility": 70, "elasticity": 62, "quality": 72 },
+    "zdld": { "relevance": 76, "visibility": 75, "elasticity": 68, "quality": 82 },
+    "fengli": { "relevance": 72, "visibility": 62, "elasticity": 75, "quality": 68 },
+    "weichuang": { "relevance": 65, "visibility": 68, "elasticity": 58, "quality": 70 },
+    "beit": { "relevance": 78, "visibility": 70, "elasticity": 80, "quality": 74 },
+    "shuanghuan": { "relevance": 82, "visibility": 80, "elasticity": 72, "quality": 88 }
+  },
+  "portfolio": {
+    "diversifyBonusMax": 8,
+    "minNamesSuggested": 3,
+    "hhiPenalty": true,
+    "diversifyBonusFormula": "bonus = round(normalized(1-HHI) × 8), HHI over module weights"
+  },
+  "v2Draft": {
+    "name": "升级版模型（草案）",
+    "note": "未接入当前交互得分，仅供方法论对照",
+    "weights": {
+      "industryRelevance": 0.20,
+      "orderVerification": 0.20,
+      "revenueContribution": 0.15,
+      "marginElasticity": 0.15,
+      "valuationMargin": 0.15,
+      "financialQuality": 0.10,
+      "infoCredibility": 0.05
+    }
+  },
+  "riskLimits": {
+    "singleNameCorePct": [8, 10],
+    "singleNameSatellitePct": [3, 5],
+    "singleSegmentPctMax": 25,
+    "singleCustomerChainPctMax": 30,
+    "themeSleeveUnverifiedPct": [15, 25],
+    "downweightRule": "估值高分位+订单未兑现 → 降权"
+  }
+}

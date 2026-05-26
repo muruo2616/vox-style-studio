@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "updated": "2026-05-25",
+  "note": "单机价值量为研究占位，待 BOM 拆解与财报交叉验证；勿用于估值建模",
+  "supplyRing": {
+    "nodes": [
+      { "id": "brain", "label": "AI", "angle": 0, "color": "#76B900", "brand": "NVIDIA", "maturity": 85 },
+      { "id": "sense", "label": "传感", "angle": 51, "color": "#0D9488", "brand": "汉威科技", "maturity": 55 },
+      { "id": "actuator", "label": "执行", "angle": 103, "color": "#E82127", "brand": "Tesla链", "maturity": 72 },
+      { "id": "reducer", "label": "减速", "angle": 154, "color": "#1E3A5F", "brand": "绿的谐波", "maturity": 68 },
+      { "id": "structure", "label": "结构", "angle": 206, "color": "#FF6B00", "brand": "拓普", "maturity": 75 },
+      { "id": "oem", "label": "代工", "angle": 257, "color": "#007AFF", "brand": "立讯精密", "maturity": 90 },
+      { "id": "bionic", "label": "仿生", "angle": 309, "color": "#7C3AED", "brand": "Clone", "maturity": 25 }
+    ],
+    "panels": {
+      "brain": { "title": "大脑 / AI", "body": "算力：NVIDIA Jetson Thor（Clone Alpha 第三方规格）；国产映射：边缘 AI 模组代工、视觉算法。相关标的：天准科技（视觉装备）、奥比中光（3D 视觉）。" },
+      "sense": { "title": "传感", "body": "Clone：320 压力 + 4 深度相机 + IMU。国产：六维力传感（柯力传感、昊志机电逻辑链）、柔性传感（汉威科技 300007 / 苏州能斯达）。" },
+      "actuator": { "title": "执行器", "body": "电驱：无框力矩电机（鸣志电器）、空心杯；仿生：Myofiber 液压（暂无 A 股纯正标的）。" },
+      "reducer": { "title": "减速器", "body": "谐波：绿的谐波、双环传动；RV：中大力德、秦川机床。人形单机用量高于协作臂。" },
+      "structure": { "title": "结构件", "body": "拓普集团、三花智控（热管理/执行器）、北特科技（丝杠）等。Clone 聚合物骨骼偏特种材料。" },
+      "oem": { "title": "代工集成", "body": "立讯精密 002475：2025 年约 3000 台人形、50 亿级机器人基地投资叙事；中国移动 1.24 亿订单（2025 报道）。" },
+      "bionic": { "title": "仿生专项", "body": "微型液压泵阀、人工肌肉材料——研发早期。主题映射：汉威科技（能斯达柔性传感）、兆威机电（微型传动）。" }
+    }
+  },
+  "electricHumanoid": {
+    "route": "电驱人形",
+    "items": [
+      { "module": "减速器（谐波/行星）", "qtyPerUnit": "20–40", "valuePerUnit": "待估", "confidence": "中", "cnLeaders": "绿的谐波、双环传动" },
+      { "module": "无框力矩电机/空心杯", "qtyPerUnit": "20–30", "valuePerUnit": "待估", "confidence": "中", "cnLeaders": "鸣志电器、汇川" },
+      { "module": "行星滚柱丝杠", "qtyPerUnit": "12–28", "valuePerUnit": "待估", "confidence": "中", "cnLeaders": "北特科技、秦川机床" },
+      { "module": "六维力/力矩传感", "qtyPerUnit": "4–12", "valuePerUnit": "待估", "confidence": "低-中", "cnLeaders": "柯力传感、昊志" },
+      { "module": "3D视觉/深度相机", "qtyPerUnit": "2–6", "valuePerUnit": "待估", "confidence": "中", "cnLeaders": "奥比中光、舜宇" },
+      { "module": "控制器/边缘算力", "qtyPerUnit": "1–2", "valuePerUnit": "待估", "confidence": "中", "cnLeaders": "汇川、Jetson生态代工" },
+      { "module": "结构件/热管理", "qtyPerUnit": "1套", "valuePerUnit": "待估", "confidence": "中", "cnLeaders": "拓普、三花、立讯" },
+      { "module": "代工/组装", "qtyPerUnit": "1", "valuePerUnit": "待估", "confidence": "中-高", "cnLeaders": "立讯精密" }
+    ]
+  },
+  "bionicHumanoid": {
+    "route": "仿生液压（Clone范式）",
+    "items": [
+      { "module": "Myofiber/人工肌肉", "qtyPerUnit": "1000+", "valuePerUnit": "待估", "confidence": "低", "cnLeaders": "材料厂（映射）" },
+      { "module": "微型液压泵阀", "qtyPerUnit": "1–4", "valuePerUnit": "待估", "confidence": "低", "cnLeaders": "中鼎、富创、亚德客" },
+      { "module": "聚合物骨骼3D打印", "qtyPerUnit": "200+节", "valuePerUnit": "待估", "confidence": "中", "cnLeaders": "铂力特、华曙" },
+      { "module": "柔性/压力传感", "qtyPerUnit": "320+", "valuePerUnit": "待估", "confidence": "低-中", "cnLeaders": "汉威/能斯达" },
+      { "module": "深度相机+IMU", "qtyPerUnit": "4+1", "valuePerUnit": "待估", "confidence": "中", "cnLeaders": "奥比中光" },
+      { "module": "整机装配", "qtyPerUnit": "1", "valuePerUnit": "待估", "confidence": "低", "cnLeaders": "立讯（待验证）" }
+    ]
+  }
+}

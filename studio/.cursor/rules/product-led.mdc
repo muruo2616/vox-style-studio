@@ -1,0 +1,58 @@
+---
+description: VOX Style Studio 产品主导设计规则 — 配饰与文化溯源
+globs:
+  - studio/**
+alwaysApply: true
+---
+
+# Product-Led Design · VOX Style Studio
+
+## 核心原则
+
+1. **产品优先**：任何输出（文案、图案、分镜、SKU）必须先回答「用户拿到手的是什么」「图案怎么打样」。
+2. **文化溯源强制**：每个 Pattern、色带、几何元素必须标注 **文化/艺术来源**（一句话即可），禁止无来源的「复古」「波西米亚」「潮酷」。
+3. **拒绝泛化 OOTD**：小红书/视频脚本须含 **产品特写 + 绑法/佩戴法 + 色值或.palette 名**；纯穿搭摆拍无产品信息 = 不合格。
+4. **Season 1 范围**：仅 **头巾 + 耳饰**；不主动扩展眼镜或其他 SKU，除非用户明确要求。
+
+## 方法论（必须遵循顺序）
+
+```
+文化/语境 → 抽象元素（色/纹/形/材）→ 产品功能（用法/搭配）→ 场景 + 价值意义
+```
+
+## 风格轨与当季主线
+
+- 四轨：R1 游牧平面 · R2 节奏 Funk · R3 构成主义饰边 · R4 后波普撞色
+- 当季主推：**Hippie × Funk + Matisse/Mondrian/Memphis**（`collections/hippie-funk-memphis/`）
+- 撞色：优先 **Palette A「Matisse 舞台」**；若用 Palette B 须说明场景（暗底/秋冬）
+
+## Funk 伦理
+
+- Funk 视觉语法根植 **非裔美国音乐文化**；文案须 **致敬而非挪用**
+- 禁止：「复古滤镜」「美式复古条纹」等去语境化描述
+
+## Mondrian 纺织化
+
+- 使用 **「节奏网格」Rhythm Grid**（不对称格比），禁止 1:1 复制商业符号式经典构图
+
+## Memphis 使用边界
+
+- 碎点/波浪面积 **≤15–20%**；与 Funk 几何合并；避免 kitsch 粉蜡笔全屋怀旧风
+
+## 输出清单（新增 SKU 时）
+
+- [ ] `sku-*.md`：尺寸、材质、打样分层、文化来源 80 字
+- [ ] hex / 专色锁色
+- [ ] 至少 1 绑法或佩戴场景
+- [ ] 与现有系列 element-library 令牌对齐
+
+## 语言
+
+- 用户面向内容：**中文**
+- 技术规格：可中英混排（尺寸、gsm、工艺）
+
+## 参考文件
+
+- `studio/brand.md`
+- `studio/aesthetics.md`
+- `studio/collections/hippie-funk-memphis/`

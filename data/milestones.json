@@ -1,0 +1,74 @@
+{
+  "version": "0.3",
+  "updated": "2026-05-25",
+  "milestones": [
+    {
+      "id": "clone-preorder",
+      "name": "Clone Alpha 预购窗口（279 台）",
+      "route": "bionic",
+      "targetDate": "2025-Q4",
+      "weight": 0.18,
+      "status": "pending",
+      "verifyTier": "reported",
+      "verification": ["预购售罄比例", "定金金额", "交付排期"],
+      "killRules": [{ "metric": "conversionRate", "operator": "<", "threshold": 0.3 }]
+    },
+    {
+      "id": "luxshare-ship",
+      "name": "立讯人形出货约 3000 台（机构调研）",
+      "route": "electric",
+      "targetDate": "2025",
+      "weight": 0.25,
+      "status": "pending",
+      "verifyTier": "reported",
+      "statusLabel": "已披露预期/待财务验证",
+      "verification": ["2025 年报机器人收入", "出货量分部", "客户结构"],
+      "killRules": [{ "metric": "verifiedShipments", "operator": "<", "threshold": 2000 }]
+    },
+    {
+      "id": "clone-deliver",
+      "name": "Clone Alpha 首批家庭交付",
+      "route": "bionic",
+      "targetDate": "2026-H1",
+      "weight": 0.22,
+      "status": "pending",
+      "verifyTier": "reported",
+      "verification": [
+        "用户交付记录",
+        "无悬挂家庭任务演示",
+        "故障率披露",
+        "Myofiber维护频率"
+      ],
+      "killRules": [
+        { "metric": "delayMonths", "operator": ">", "threshold": 6 },
+        { "metric": "deliveryRate", "operator": "<", "threshold": 0.5 },
+        {
+          "metric": "hangingDependentCoreTasks",
+          "operator": ">",
+          "threshold": 0.3,
+          "definition": "量产版在公开家庭场景/用户交付中，核心移动/操作任务仍依赖外部悬挂、支架或人工保护"
+        }
+      ]
+    },
+    {
+      "id": "luxshare-line",
+      "name": "立讯制造 2.0 柔性产线上线",
+      "route": "electric",
+      "targetDate": "2026",
+      "weight": 0.20,
+      "status": "pending",
+      "verifyTier": "reported",
+      "verification": ["产线投产公告", "单机节拍", "自动化率"]
+    },
+    {
+      "id": "cn-10k",
+      "name": "中国人形万台级出货（行业乐观情景）",
+      "route": "industry",
+      "targetDate": "2026",
+      "weight": 0.15,
+      "status": "pending",
+      "verifyTier": "reported",
+      "verification": ["工信部/行业协会统计", "头部厂商合计出货"]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "version": "0.3",
+  "updated": "2026-05-25",
+  "nodes": [
+    {
+      "id": "figure",
+      "label": "Figure AI",
+      "kind": "anchor1",
+      "tier": 1,
+      "route": ["electric"],
+      "evidenceLevel": "reported",
+      "summary": "BotQ 量产：350+ 台 Figure 03 已下线/交付（figure.ai）；需区分内部部署 vs 商业交付 vs 财务确认。BMW 等工厂试点仍并行。",
+      "sources": [{ "title": "Figure.ai", "tier": 2, "date": "2025-2026" }],
+      "section": "#s1"
+    },
+    {
+      "id": "tesla",
+      "label": "Tesla Optimus",
+      "kind": "anchor1",
+      "tier": 1,
+      "route": ["electric"],
+      "evidenceLevel": "reported",
+      "summary": "Gen3 · Fremont 7–8 月试产（Q1 2026 业绩会）；Model S/X 产线改造中。初期产出 quite slow。",
+      "sources": [{ "title": "Tesla Q1 2026 call", "tier": 2, "date": "2026-Q1" }],
+      "section": "#s1"
+    },
+    {
+      "id": "ubtech",
+      "label": "优必选",
+      "kind": "anchor1",
+      "tier": 1,
+      "route": ["electric"],
+      "evidenceLevel": "reported",
+      "summary": "2025 全尺寸工业人形交付 1079 台；具身智能营收 8.2 亿（+22×）；9880.HK。",
+      "sources": [{ "title": "年报/港交所", "tier": 1, "date": "2025" }],
+      "section": "#s1"
+    },
+    {
+      "id": "unitree",
+      "label": "宇树 Unitree",
+      "kind": "anchor2",
+      "tier": 2,
+      "route": ["electric", "service"],
+      "evidenceLevel": "reported",
+      "summary": "2025 出货 reported 5500+，需核验是否为人形单独口径、四足+人形合计或产品线统计；2026 目标 1–2 万台（公司披露）。",
+      "ship2025": { "reported": "5500+", "humanoid": null, "quadruped": null, "note": "口径待交叉验证：人形单独 vs 四足+人形合计 vs 产品线统计" },
+      "sources": [{ "title": "IDC", "tier": 2, "date": "2025" }],
+      "section": "#s1"
+    },
+    {
+      "id": "agibot",
+      "label": "智元 Agibot",
+      "kind": "anchor2",
+      "tier": 2,
+      "route": ["electric"],
+      "evidenceLevel": "reported",
+      "summary": "2025 出货 5100+；2026-03 第 10000 台通用具身机器人下线；GO-1/GO-2 基座大模型。",
+      "sources": [{ "title": "官方下线仪式", "tier": 2, "date": "2026-03" }],
+      "section": "#s1"
+    },
+    {
+      "id": "clone",
+      "label": "Clone Robotics",
+      "kind": "anchor1",
+      "tier": 1,
+      "route": ["bionic"],
+      "evidenceLevel": "verified",
+      "summary": "波兰仿生液压整机；Alpha 279 台限量预售，Protoclone 仍悬挂原型。",
+      "sources": [{ "title": "Clone Robotics 官网", "tier": 1, "date": "2025" }],
+      "section": "#s2"
+    },
+    {
+      "id": "leader",
+      "label": "绿的谐波",
+      "kind": "supplier",
+      "tier": 1,
+      "route": ["electric"],
+      "segment": ["reducer"],
+      "evidenceLevel": "verified",
+      "orderStatus": "pending",
+      "section": "#s6"
+    },
+    {
+      "id": "luxshare",
+      "label": "立讯精密",
+      "kind": "supplier",
+      "tier": 1,
+      "route": ["electric"],
+      "segment": ["oem"],
+      "evidenceLevel": "reported",
+      "orderStatus": "pending",
+      "summary": "2025 机构调研预计出货约 3000 台；待财报验证",
+      "section": "#s6"
+    }
+  ]
+}

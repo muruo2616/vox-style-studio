@@ -1,0 +1,264 @@
+{
+  "version": "0.3.5",
+  "updated": "2026-05-26",
+  "methodology": "个案购销映射分两层展示：① named=具名公司/机构（须标注 evidence）；② categories=未披露具名的品类/外协。A 股年报前五大供应商/客户常匿名或合并披露，无法「全面自动检测」全部具名方——仅收录公开可核对条目，缺口用品类占位。",
+  "coverageNote": "具名覆盖率取决于年报、调研纪要与 Tier1–2 订单披露；未列出≠不存在，多为未公开或未核实。",
+  "companies": {
+    "luxshare": {
+      "upstream": {
+        "named": [],
+        "categories": ["品牌方来料零部件包", "连接器/结构件二级供应商", "测试治具与工装厂商"]
+      },
+      "core": ["人形/机器人 ODM 组装", "精密结构件与线束", "整机联调与出货"],
+      "downstream": {
+        "named": [
+          { "name": "苹果等消费电子大客户", "evidence": "reported", "source": "年报客户结构", "note": "基本盘，非机器人专供" }
+        ],
+        "categories": ["人形/机器人品牌整机厂（调研口径，待财报拆分）"]
+      },
+      "evidenceStatus": "reported",
+      "disclosureLevel": "partial",
+      "note": "机构调研出货量口径≠机器人收入占比；上游多为 ODM 来料模式，具名二级厂少披露"
+    },
+    "hanwei": {
+      "upstream": {
+        "named": [],
+        "categories": ["柔性基底与导电材料供应商", "封装硅胶/皮肤基材", "传感器信号调理芯片"]
+      },
+      "core": ["控股子公司能斯达：柔性微纳压力传感", "气体/环境传感平台（基本盘）"],
+      "downstream": {
+        "named": [],
+        "categories": ["人形/协作机器人整机厂（样品/定制，待批量披露）", "工业物联网集成商"]
+      },
+      "evidenceStatus": "inferred",
+      "disclosureLevel": "minimal"
+    },
+    "leader": {
+      "upstream": {
+        "named": [],
+        "categories": ["特种合金钢、轴承钢", "柔轮用不锈钢薄壁管", "润滑油与密封件"]
+      },
+      "core": ["谐波减速器", "机电一体化关节模组（布局中）"],
+      "downstream": {
+        "named": [
+          { "name": "埃斯顿", "evidence": "verified", "source": "客户/产业链公开信息", "note": "本体厂客户" },
+          { "name": "新时达", "evidence": "reported", "source": "机器人产业链映射", "note": "协作/工业机器人客户" }
+        ],
+        "categories": ["人形/四足整机厂（订单能见度待跟踪）", "海外谐波竞品价格锚"]
+      },
+      "evidenceStatus": "verified",
+      "disclosureLevel": "partial"
+    },
+    "tuopu": {
+      "upstream": {
+        "named": [],
+        "categories": ["铝合金锭/压铸材料", "紧固件与密封件", "部分电机/轴承外购"]
+      },
+      "core": ["汽车结构件", "机器人线性/旋转执行器总成", "底盘与壳体一体化件"],
+      "downstream": {
+        "named": [
+          { "name": "特斯拉", "evidence": "reported", "source": "年报/供应链公开信息", "note": "新能源车基本盘客户" }
+        ],
+        "categories": ["人形/机器人主机厂（供应链传闻，待验证）"]
+      },
+      "evidenceStatus": "reported",
+      "disclosureLevel": "partial"
+    },
+    "sanhua": {
+      "upstream": {
+        "named": [],
+        "categories": ["铜管/铝冷板", "制冷剂与阀件橡胶", "电子膨胀阀零部件"]
+      },
+      "core": ["热管理阀件与换热器", "机电执行器（汽车+机器人延伸）"],
+      "downstream": {
+        "named": [],
+        "categories": ["全球新能源车热管理客户", "人形关节/电池/算力液冷方案（收入占比待拆分）"]
+      },
+      "evidenceStatus": "inferred",
+      "disclosureLevel": "minimal"
+    },
+    "mingzhi": {
+      "upstream": {
+        "named": [],
+        "categories": ["硅钢/电工钢", "钕铁硼永磁体", "漆包线与微型轴承"]
+      },
+      "core": ["空心杯电机", "无框力矩电机", "步进/伺服电机（部分品类）"],
+      "downstream": {
+        "named": [],
+        "categories": ["医疗/安防/AGV 设备商", "灵巧手/人形关节模组厂（映射，待订单披露）"]
+      },
+      "evidenceStatus": "inferred",
+      "disclosureLevel": "minimal"
+    },
+    "keli": {
+      "upstream": {
+        "named": [],
+        "categories": ["应变计/金属箔", "弹性体材料", "信号调理与 ADC 芯片"]
+      },
+      "core": ["称重/力矩传感器", "六维力传感器（机器人方向）"],
+      "downstream": {
+        "named": [],
+        "categories": ["协作臂/人形腕踝模组厂", "工业自动化集成商"]
+      },
+      "evidenceStatus": "inferred",
+      "disclosureLevel": "minimal"
+    },
+    "inovance": {
+      "upstream": {
+        "named": [
+          { "name": "英飞凌、安森美等", "evidence": "inferred", "source": "功率器件行业惯例", "note": "IGBT/IPM 进口/合资渠道，非独家" },
+          { "name": "斯达半导、士兰微等", "evidence": "inferred", "source": "国产替代映射", "note": "SiC/IGBT 国产导入比例待财报拆分" }
+        ],
+        "categories": ["MCU/FPGA 与被动件", "代工贴片（部分）"]
+      },
+      "core": ["多轴伺服驱动器", "运动控制器与 PLC", "工业机器人解决方案"],
+      "downstream": {
+        "named": [
+          { "name": "埃斯顿", "evidence": "inferred", "source": "产业链竞合", "note": "客户与竞品并存，需个案核实" }
+        ],
+        "categories": ["3C/锂电/通用自动化客户", "人形供应链（待验证，多为推断）"]
+      },
+      "evidenceStatus": "inferred",
+      "disclosureLevel": "partial",
+      "note": "年报少披露具名芯片厂；半导体为品类推断非独家供应"
+    },
+    "estun": {
+      "upstream": {
+        "named": [
+          { "name": "汇川技术", "evidence": "inferred", "source": "伺服外购/自研并存", "note": "竞合关系" },
+          { "name": "绿的谐波、双环传动等", "evidence": "inferred", "source": "减速器供应链", "note": "自研+外采并存" }
+        ],
+        "categories": ["铸件与机加工件", "标准件与线束"]
+      },
+      "core": ["工业机器人本体", "伺服系统与运动控制", "部分核心零部件垂直整合"],
+      "downstream": {
+        "named": [],
+        "categories": ["汽车/3C/通用工业终端", "人形/协作新项目（披露有限）"]
+      },
+      "evidenceStatus": "inferred",
+      "disclosureLevel": "partial"
+    },
+    "tzcl": {
+      "upstream": {
+        "named": [],
+        "categories": ["工业相机/镜头模组", "光源与工控机", "标定治具与算法授权"]
+      },
+      "core": ["机器视觉装备与检测系统", "精密测量/标定方案"],
+      "downstream": {
+        "named": [],
+        "categories": ["新能源与半导体检测设备客户", "机器人/人形视觉检测（逻辑映射，待订单）"]
+      },
+      "evidenceStatus": "inferred",
+      "disclosureLevel": "minimal"
+    },
+    "zhaowei": {
+      "upstream": {
+        "named": [],
+        "categories": ["微型轴承与齿轮坯", "微型电机材料", "注塑与模具厂商"]
+      },
+      "core": ["微型齿轮箱与传动系统", "微型驱动模组"],
+      "downstream": {
+        "named": [],
+        "categories": ["消费电子/汽车微传动客户", "灵巧手/仿生关节潜在供应（待验证）"]
+      },
+      "evidenceStatus": "inferred",
+      "disclosureLevel": "minimal"
+    },
+    "orbbec": {
+      "upstream": {
+        "named": [
+          { "name": "索尼、三星等", "evidence": "inferred", "source": "CMOS 供应链惯例", "note": "图像传感器，非独家" }
+        ],
+        "categories": ["光学镜头与结构件", "激光器/VCSEL（结构光）"]
+      },
+      "core": ["3D 视觉传感器模组", "深度相机 SDK 与标定"],
+      "downstream": {
+        "named": [],
+        "categories": ["服务机器人/刷脸支付等存量场景", "人形头部深度相机（映射，竞争加剧）"]
+      },
+      "evidenceStatus": "inferred",
+      "disclosureLevel": "partial"
+    },
+    "leisai": {
+      "upstream": {
+        "named": [],
+        "categories": ["功率器件与 MCU", "PCB 与结构件", "电机（部分外购）"]
+      },
+      "core": ["步进/伺服驱动器", "运动控制卡与电机"],
+      "downstream": {
+        "named": [],
+        "categories": ["3C 设备与通用自动化", "协作/人形关节驱动（主题映射，待验证）"]
+      },
+      "evidenceStatus": "inferred",
+      "disclosureLevel": "minimal"
+    },
+    "zdld": {
+      "upstream": {
+        "named": [],
+        "categories": ["齿轮钢与轴承", "热处理与磨削外协", "电机（配套减速器方案）"]
+      },
+      "core": ["RV 减速器", "谐波/行星减速器", "电机+减速器一体化"],
+      "downstream": {
+        "named": [],
+        "categories": ["工业/协作机器人本体厂", "人形关节（渗透率待跟踪）"]
+      },
+      "evidenceStatus": "inferred",
+      "disclosureLevel": "minimal"
+    },
+    "fengli": {
+      "upstream": {
+        "named": [],
+        "categories": ["齿轮坯与轴承钢", "机加工与热处理外协"]
+      },
+      "core": ["精密减速器与小模数齿轮"],
+      "downstream": {
+        "named": [],
+        "categories": ["小型机器人/自动化客户（披露少）", "人形主题映射（订单待验证）"]
+      },
+      "evidenceStatus": "inferred",
+      "disclosureLevel": "minimal"
+    },
+    "weichuang": {
+      "upstream": {
+        "named": [],
+        "categories": ["IGBT/IPM 模块", "电容电感与 PCB", "机壳铝型材"]
+      },
+      "core": ["变频器", "伺服驱动器（机器人配套品类）"],
+      "downstream": {
+        "named": [],
+        "categories": ["起重/机床/通用 OEM", "机器人伺服（占比小，主题映射）"]
+      },
+      "evidenceStatus": "inferred",
+      "disclosureLevel": "minimal"
+    },
+    "beit": {
+      "upstream": {
+        "named": [],
+        "categories": ["轴承钢/研磨棒材", "螺母材料与表面处理药剂", "磨削设备（部分进口）"]
+      },
+      "core": ["行星滚柱丝杠", "汽车底盘零部件（基本盘）"],
+      "downstream": {
+        "named": [],
+        "categories": ["汽车 Tier1 客户", "人形膝踝线性关节（叙事强，收入待拆分）"]
+      },
+      "evidenceStatus": "inferred",
+      "disclosureLevel": "minimal"
+    },
+    "shuanghuan": {
+      "upstream": {
+        "named": [],
+        "categories": ["齿轮钢、锻件", "轴承与热处理外协", "部分谐波柔轮材料"]
+      },
+      "core": ["RV 减速器齿轮与总成", "谐波/行星减速器产业链协同"],
+      "downstream": {
+        "named": [
+          { "name": "埃斯顿", "evidence": "reported", "source": "机器人客户公开映射", "note": "减速器/齿轮客户" }
+        ],
+        "categories": ["新能源车齿轮（基本盘）", "人形关节（间接受益，待量化）"]
+      },
+      "evidenceStatus": "inferred",
+      "disclosureLevel": "partial",
+      "note": "年报前五大供应商多为匿名；上游暂以品类占位"
+    }
+  }
+}

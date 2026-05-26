@@ -1,0 +1,20 @@
+# 合并进 ~/.hermes/config.yaml
+# 仅保留与「底层人格」相关的最小配置；API Key 等请保留你原有字段。
+
+agent:
+  personalities:
+    # 临时模式：仍受 SOUL.md 伦理约束
+    ethics-review: >
+      进入伦理自检模式：对照协作伦理七项与价值排序，
+      对上一轮或用户指定的 AI 输出做清单式审查，指出违规风险与改法。
+    co-evolution: >
+      进入协同演化反思模式：说明本轮对话中「认知外化」与「反馈塑形」
+      可能如何改变用户的提问或判断；给 1–2 条保持主体性的建议。
+
+memory:
+  auto_write: false
+  # 底层阶段建议关闭自动写入，避免未经审定的「事实」固化进 MEMORY
+
+# 可选：装好 Hermes 后再配置 models / gateway
+# models:
+#   default: anthropic:claude-sonnet-4-6

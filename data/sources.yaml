@@ -1,0 +1,65 @@
+version: "0.3"
+updated: "2026-05-25"
+format: "[{evidenceLevel}][Tier{n}][{date}] {source}：{fact}"
+
+facts:
+  - evidenceLevel: reported
+    tier: 2
+    date: "2026-01-24"
+    source: "IDC/CGTN"
+    fact: "2025 全球人形机器人出货约 1.8 万台，销售额约 4.4 亿美元"
+    url: "https://news.cgtn.com/news/2026-01-24/IDC-report-China-leads-the-global-humanoid-robot-rise-in-2025-1KccOGZyVGM/p.html"
+
+  - evidenceLevel: reported
+    tier: 3
+    date: "2025"
+    source: "立讯机构调研"
+    fact: "2025 人形机器人出货预期约 3000 台，待年报验证"
+    url: "https://wx.leaderobot.com/news/6770"
+    status: pending
+
+  - evidenceLevel: reported
+    tier: 1
+    date: "2025"
+    source: "优必选年报"
+    fact: "2025 全尺寸工业人形交付 1079 台；具身智能营收 8.2 亿"
+    status: pending
+
+  - evidenceLevel: reported
+    tier: 2
+    date: "2025-2026"
+    source: "Figure.ai"
+    fact: "BotQ 量产，350+ 台 Figure 03 已下线/交付；需区分下线/部署/商业交付"
+    deliveryStatus: "下线或商业交付（待细分）"
+
+  - evidenceLevel: reported
+    tier: 2
+    date: "2026-Q1"
+    source: "Tesla Q1 2026 业绩会"
+    fact: "Optimus Gen3 Fremont 7–8 月试产"
+
+  - evidenceLevel: reported
+    tier: 2
+    date: "2026-03"
+    source: "智元官方"
+    fact: "第 10000 台通用具身机器人下线"
+
+  - evidenceLevel: reported
+    tier: 2
+    date: "2025"
+    source: "IDC/媒体"
+    fact: "宇树 2025 出货 reported 5500+；口径待交叉验证"
+    note: "需核验：人形单独 vs 四足+人形合计 vs 产品线统计"
+
+marketSizeNotes:
+  - metric: "IDC 窄口径销售额"
+    value: "~$4.4 亿"
+    year: 2025
+    tier: 2
+  - metric: "信通院广义产业链"
+    value: "~170 亿元"
+    year: 2025
+    tier: 2
+  - metric: "RnM/FMI 预测"
+    value: "$1.9–7.8B"
+    note: "与 IDC 可能存在统计边界差异，不可横比；宜拆分为硬件本体/广义产业链/TAM 三类"

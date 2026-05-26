@@ -1,0 +1,16 @@
+{
+  "version": "0.1",
+  "enabled": true,
+  "provider": "github-issues",
+  "githubRepo": "sjlov/vox-style-studio",
+  "labels": ["feedback", "vox-style-report"],
+  "fallbackUrl": "docs/feedback-setup.md",
+  "feedbackTypes": [
+    "事实错误",
+    "数据过期",
+    "交互问题",
+    "来源补充",
+    "投资口径",
+    "其他"
+  ]
+}
