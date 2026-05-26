@@ -1,17 +1,17 @@
-# 意见反馈机制配置
+﻿# 意见反馈机制配置
 
 当前版本采用静态站友好的 GitHub Issues 反馈机制，不需要后端。
 
 ## 启用步骤
 
-1. 将项目发布到 GitHub 仓库，例如 `sjlov/vox-style-studio`。
+1. 将项目发布到 GitHub 仓库，例如 `muro02616/vox-style-studio`。
 2. 打开仓库的 Issues 功能。
 3. 编辑 `data/feedback-config.json`。
 4. 将 `githubRepo` 从空字符串改为你的仓库名：
 
 ```json
 {
-  "githubRepo": "sjlov/vox-style-studio"
+  "githubRepo": "muro02616/vox-style-studio"
 }
 ```
 
@@ -43,3 +43,4 @@ Hermes 工作流完成后，可让 Issues 或表单记录进入：
 2. 人工核验队列。
 3. 证据分级：official / media / inferred / rumor / rejected。
 4. 确认后再进入报告正文或里程碑，不直接自动改研究结论。
+
