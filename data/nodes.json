@@ -1,6 +1,6 @@
 {
   "version": "0.3",
-  "updated": "2026-05-25",
+  "updated": "2026-05-27",
   "nodes": [
     {
       "id": "figure",
@@ -57,6 +57,17 @@
       "summary": "2025 出货 5100+；2026-03 第 10000 台通用具身机器人下线；GO-1/GO-2 基座大模型。",
       "sources": [{ "title": "官方下线仪式", "tier": 2, "date": "2026-03" }],
       "section": "#s1"
+    },
+    {
+      "id": "weilan",
+      "label": "蔚蓝科技",
+      "kind": "anchor2",
+      "tier": 2,
+      "route": ["service"],
+      "evidenceLevel": "reported",
+      "summary": "消费级四足 BabyAlpha reported 累计 2.5万+ 台（2026-05 官方/媒体）；家庭用户约 90%。A3 发布，Q3 上市待交付验证。",
+      "sources": [{ "title": "公司发布/财经媒体", "tier": 2, "date": "2026-05" }],
+      "section": "#s5"
     },
     {
       "id": "clone",

@@ -73,8 +73,9 @@
           <select id="feedback-type">${types.map(t => `<option>${t}</option>`).join("")}</select>
         </label>
         <label>
-          <span>具体说明</span>
-          <textarea id="feedback-message" rows="5" placeholder="例如：哪一段事实需要核验？哪个数据过期？哪个交互不顺？"></textarea>
+          <span>具体说明 <em class="feedback-required">（必填，至少 10 字）</em></span>
+          <textarea id="feedback-message" rows="5" required minlength="10" placeholder="例如：哪一段事实需要核验？哪个数据过期？哪个交互不顺？"></textarea>
+          <p id="feedback-error" class="feedback-error" role="alert" hidden>请填写至少 10 个字的说明后再提交。</p>
         </label>
         <label>
           <span>联系方式（可选）</span>
@@ -94,15 +95,32 @@
     backdrop.addEventListener("click", event => {
       if (event.target === backdrop) close();
     });
+    const messageEl = backdrop.querySelector("#feedback-message");
+    const errorEl = backdrop.querySelector("#feedback-error");
     backdrop.querySelector(".feedback-primary").addEventListener("click", () => {
+      const message = messageEl.value.trim();
+      if (message.length < 10) {
+        errorEl.hidden = false;
+        messageEl.setAttribute("aria-invalid", "true");
+        messageEl.focus();
+        return;
+      }
+      errorEl.hidden = true;
+      messageEl.removeAttribute("aria-invalid");
       const payload = {
         type: backdrop.querySelector("#feedback-type").value,
-        message: backdrop.querySelector("#feedback-message").value.trim(),
+        message,
         contact: backdrop.querySelector("#feedback-contact").value.trim(),
         context: currentContext(),
       };
       window.open(issueUrl(config, payload), "_blank", "noopener");
       close();
+    });
+    messageEl.addEventListener("input", () => {
+      if (messageEl.value.trim().length >= 10) {
+        errorEl.hidden = true;
+        messageEl.removeAttribute("aria-invalid");
+      }
     });
     backdrop.querySelector("#feedback-message").focus();
   }

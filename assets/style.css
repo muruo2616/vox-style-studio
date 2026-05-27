@@ -334,6 +334,23 @@ footer {
   font-size: 0.8rem;
 }
 
+.feedback-required {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.feedback-error {
+  margin: 0.35rem 0 0;
+  color: #b91c1c;
+  font-size: 0.8rem;
+}
+
+.feedback-modal textarea[aria-invalid="true"] {
+  border-color: #f87171;
+}
+
 .feedback-actions {
   margin-top: 1rem;
   justify-content: flex-end;

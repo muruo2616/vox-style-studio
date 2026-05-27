@@ -1,0 +1,76 @@
+{
+  "version": "0.1",
+  "updated": "2026-05-27",
+  "disclaimer": "候选池条目须经人工 accepted 后方可进入 data/*.json 或报告正文。Hermes 不得跳过此队列直接改结论。",
+  "evidenceLevels": ["official", "media", "inferred", "rumor", "rejected"],
+  "statuses": ["pending", "reviewing", "accepted", "rejected"],
+  "feedbackTypes": [
+    "事实错误",
+    "数据过期",
+    "交互问题",
+    "来源补充",
+    "投资口径",
+    "其他"
+  ],
+  "items": [
+    {
+      "id": "feed-2026-001",
+      "createdAt": "2026-05-27T00:00:00.000Z",
+      "source": "manual",
+      "feedbackType": "来源补充",
+      "evidence": "official",
+      "status": "accepted",
+      "summary": "§3b 补充智平方 AlphaBrain 开源具身工具链（VLA/世界模型/RL）",
+      "detail": "核验 GitHub AlphaBrainGroup/AlphaBrain（2026-04-20 上线、持续维护）、alphabrain-platform.com 与文档站。社媒「全球首个」类表述未写入报告正文；benchmark 数字标 reported。",
+      "pageUrl": "https://muruo2616.github.io/vox-style-studio/clone-robotics-report.html#s3b-opensource",
+      "tab": "routes",
+      "reportVersion": "v0.3.6",
+      "targetFiles": ["clone-robotics-report.html", "clone-robotics-report.md"],
+      "reviewNotes": "2026-05-27 已合入 §3b 表格一行与 §5a 中国侧脚注；未改 nodes.json / scoring-config。",
+      "sources": [
+        {
+          "title": "AlphaBrain GitHub",
+          "url": "https://github.com/AlphaBrainGroup/AlphaBrain",
+          "tier": "official"
+        },
+        {
+          "title": "AlphaBrain Platform",
+          "url": "https://www.alphabrain-platform.com/",
+          "tier": "official"
+        },
+        {
+          "title": "AlphaBrain Docs",
+          "url": "https://alphabraingroup.github.io/AlphaBrain/",
+          "tier": "official"
+        }
+      ]
+    },
+    {
+      "id": "feed-2026-002",
+      "createdAt": "2026-05-27T12:00:00.000Z",
+      "source": "manual",
+      "feedbackType": "来源补充",
+      "evidence": "media",
+      "status": "accepted",
+      "summary": "消费级四足：蔚蓝科技 BabyAlpha 2.5万+台与 A3 发布（C 端数据闭环案例）",
+      "detail": "官方/媒体 2026-05：BabyAlpha 累计 2.5万+ 台、家庭用户约 90%；A3 发布、Q3 上市待交付。与宇树 IDC 全品类出货口径勿直接比「全球第一」。端侧异构算力/TPS/感知参数为官方称，未写入具体 benchmark 数字。",
+      "pageUrl": "https://muruo2616.github.io/vox-style-studio/clone-robotics-report.html#s5",
+      "tab": "routes",
+      "reportVersion": "v0.3.6",
+      "targetFiles": ["clone-robotics-report.html", "clone-robotics-report.md", "data/nodes.json"],
+      "reviewNotes": "2026-05-27 已合入 §5 场景阶梯脚注、全球整机表、四足路线与 nodes；未改 scoring。",
+      "sources": [
+        {
+          "title": "新浪财经 · BabyAlpha A3 发布",
+          "url": "https://finance.sina.com.cn/stock/t/2026-05-21/doc-inhysnxe8960554.shtml",
+          "tier": "media"
+        },
+        {
+          "title": "凤凰网 · BabyAlpha A3",
+          "url": "https://finance.ifeng.com/c/8tJg2pwbnkr",
+          "tier": "media"
+        }
+      ]
+    }
+  ]
+}
