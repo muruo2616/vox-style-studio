@@ -166,6 +166,7 @@
     .view-toggle.active { background: var(--luxshare-navy); color: white; }
     .mermaid-wrap { background: linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%); border: 1px solid #e2e8f0; }
     .mermaid-wrap .mermaid svg { max-width: 100%; }
+    pre.mermaid { margin: 0; padding: 0; border: 0; background: transparent; overflow: visible; white-space: pre-wrap; font-family: inherit; }
     /* 产业链结构图谱 */
     .struct-map { display: flex; flex-direction: column; gap: 16px; }
     .struct-layer { border-radius: 14px; border: 1px solid #e2e8f0; background: #fff; overflow: hidden; }
@@ -1647,12 +1648,10 @@ BOM/供应链         成本仍高                             国产化与规�
       </div>
       <div class="mt-8 bg-slate-100 rounded-xl p-4">
         <p class="text-xs text-slate-500 mb-2">静态路线图（参考）</p>
-        <div class="mermaid text-sm">
-flowchart TD
-  Q["风险偏好?"] -->|保守| A["工业伺服+现金流"]
+        <pre class="mermaid text-sm" id="wizard-roadmap-mermaid">flowchart TD
+  Q["风险偏好"] -->|保守| A["工业伺服与现金流"]
   Q -->|均衡| B["电驱人形零部件"]
-  Q -->|激进| C["仿生传感期权"]
-        </div>
+  Q -->|激进| C["仿生传感期权"]</pre>
       </div>
     </section>
 
@@ -1906,7 +1905,7 @@ flowchart TD
 
   <script>
     mermaid.initialize({
-      startOnLoad: true,
+      startOnLoad: false,
       theme: 'base',
       securityLevel: 'loose',
       themeVariables: {
@@ -4674,6 +4673,26 @@ flowchart TD
       return { mode: 'tab', tab: 'quick', section: null };
     }
 
+    function mermaidNodesInVisiblePanels() {
+      return [...document.querySelectorAll('.mermaid')].filter(el => {
+        if (el.querySelector('svg')) return false;
+        const panel = el.closest('.v3-panel');
+        if (!panel) return true;
+        if (!document.body.classList.contains('v3-tab-mode')) return true;
+        return panel.classList.contains('v3-visible');
+      });
+    }
+
+    async function renderDeferredMermaid() {
+      const nodes = mermaidNodesInVisiblePanels();
+      if (!nodes.length || typeof mermaid === 'undefined' || !mermaid.run) return;
+      try {
+        await mermaid.run({ nodes });
+      } catch (err) {
+        console.warn('Mermaid render:', err);
+      }
+    }
+
     function setV3Tab(tab, pushHash, scrollTargetId) {
       if (!V3_TABS.includes(tab)) tab = 'quick';
       document.body.classList.add('v3-tab-mode');
@@ -4691,6 +4710,7 @@ flowchart TD
         history.replaceState(null, '', base + '#tab=' + tab);
       }
       window.dispatchEvent(new Event('resize'));
+      requestAnimationFrame(() => { renderDeferredMermaid(); });
       const anchorId = scrollTargetId || V3_TAB_ANCHOR[tab];
       const target = (anchorId && document.getElementById(anchorId))
         || document.querySelector('.v3-panel.v3-visible');
@@ -4839,6 +4859,7 @@ flowchart TD
     }
 
     initV3Tabs();
+    renderDeferredMermaid();
     loadComponentsData();
     loadRumourClues();
     initRumourPanel();
