@@ -37,8 +37,9 @@
       <button type="button" class="song-nav-link" data-section="strategy"><span class="chapter-num">三</span>国家策略</button>
       <button type="button" class="song-nav-link" data-section="chain"><span class="chapter-num">四</span>制度链条</button>
       <button type="button" class="song-nav-link" data-section="outcome"><span class="chapter-num">五</span>实施效果</button>
-      <button type="button" class="song-nav-link" data-section="logic"><span class="chapter-num">六</span>战略逻辑</button>
-      <button type="button" class="song-nav-link" data-section="modern"><span class="chapter-num">七</span>现代启示</button>
+      <button type="button" class="song-nav-link" data-section="human"><span class="chapter-num">六</span>人的因素</button>
+      <button type="button" class="song-nav-link" data-section="logic"><span class="chapter-num">七</span>战略逻辑</button>
+      <button type="button" class="song-nav-link" data-section="modern"><span class="chapter-num">八</span>现代启示</button>
       <button type="button" class="song-nav-link" data-section="conclusion"><span class="chapter-num">跋</span>结语</button>
     </aside>
 
@@ -48,47 +49,72 @@
         <div class="song-hero reveal">
           <div class="song-hero-seal" role="button" tabindex="0" title="点击落印">策略</div>
           <h2>在约束中选择，在繁荣中困局</h2>
-          <p class="subtitle">宋朝最值得研究的，不只是「它为什么有钱」，而是它在特定时代条件下选择了一套清晰的国家策略。</p>
+          <p class="subtitle">我选择研究的，不只是「它为什么有钱」，而是<strong>一群人在特定历史创伤与利益结构下</strong>，如何选择一套他们认为最安全、最可控的国家运行方式。</p>
           <p class="thesis">
             <span class="thesis-keyword" data-kw="文官集权">文官集权</span>压住内部分裂 ·
             <span class="thesis-keyword" data-kw="市场江南">市场江南</span>支撑财政 ·
             <span class="thesis-keyword" data-kw="货币金融">货币金融</span>提升调度 ·
-            <span class="thesis-keyword" data-kw="妥协外交">妥协外交</span>换取经济空间
+            <span class="thesis-keyword" data-kw="妥协外交">妥协外交</span>换取经济空间 ·
+            <span class="thesis-keyword" data-kw="人的因素">人的因素</span>塑造实际效果
           </p>
         </div>
 
+        <div class="dual-track-banner reveal reveal-delay-1">
+          <div class="track-line track-objective">
+            <span class="track-label">明线 · 客观制度</span>
+            <p>时代条件 → 价值排序 → 制度策略 → 制度链条 → 实施效果 → 为何富而难强</p>
+          </div>
+          <div class="track-divider" aria-hidden="true">⟷</div>
+          <div class="track-line track-human">
+            <span class="track-label">暗线 · 人的行为</span>
+            <p>皇帝焦虑 → 士大夫价值 → 官僚变形 → 武将萎缩 → 商民逐利 → 民众承压 → 短期理性累积</p>
+          </div>
+        </div>
+
         <div class="framework-table-wrap reveal reveal-delay-1">
-          <table class="framework-table">
+          <p class="table-hint">点击任一行，展开该层次的完整说明与史料依据。</p>
+          <table class="framework-table framework-table-clickable">
             <thead>
               <tr>
                 <th>层次</th>
                 <th>核心问题</th>
                 <th>宋朝的回答</th>
+                <th class="col-hint"></th>
               </tr>
             </thead>
-            <tbody>
-              <tr><td>时代条件</td><td>面临什么硬约束？</td><td>五代创伤、北方压力、江南崛起、商业成熟、技术扩散</td></tr>
-              <tr><td>价值排序</td><td>统治者优先保什么？</td><td>内部稳定 &gt; 军事冒险；中央集权 &gt; 地方效率</td></tr>
-              <tr><td>制度策略</td><td>用什么工具实现？</td><td>强干弱枝、商税专卖、货币金融、岁币外交</td></tr>
-              <tr><td>制度链条</td><td>各制度如何互相催化？</td><td>反藩镇 → 高成本 → 市场财政 → 金融 → 军事高负荷</td></tr>
-              <tr><td>实施效果</td><td>得失何在？</td><td>政治经济成功；军事转化与信用纪律不足</td></tr>
-              <tr><td>现代启示</td><td>「富而难强」意味什么？</td><td>财富须沉淀为能力、纪律与安全</td></tr>
-            </tbody>
+            <tbody id="framework-tbody"></tbody>
           </table>
+          <div id="framework-detail" class="expand-detail-panel" role="region" aria-live="polite" hidden></div>
         </div>
 
         <div class="mermaid-wrap reveal reveal-delay-2">
+          <p class="table-hint">上图：客观制度线（明线） · 下图：人的行为线（暗线）</p>
           <pre class="mermaid">
 flowchart TD
-  A[唐末五代军阀化] --> B[强中央 · 抑武人 · 重文官]
-  B --> C[内部稳定 ↑ 行政成本 ↑]
-  C --> D[财政需求扩大]
-  D --> E[江南 + 商业 + 专卖 + 纸币]
-  E --> F[经济繁荣 · 财政强韧]
-  F --> G{外部军事压力}
-  G --> H[军费 · 岁币 · 冗费]
-  H --> I[加税 · 滥发 · 信用受损]
-  I --> J[富而难强困局]
+  subgraph objective["明线 · 客观制度"]
+    A[唐末五代军阀化] --> B[强中央 · 抑武人 · 重文官]
+    B --> C[内部稳定 ↑ 行政成本 ↑]
+    C --> D[财政需求扩大]
+    D --> E[江南 + 商业 + 专卖 + 纸币]
+    E --> F[经济繁荣 · 财政强韧]
+    F --> G{外部军事压力}
+    G --> H[军费 · 岁币 · 冗费]
+    H --> I[加税 · 滥发 · 信用受损]
+    I --> J[富而难强困局]
+  end
+          </pre>
+          <pre class="mermaid">
+flowchart TD
+  subgraph human["暗线 · 人的行为"]
+    H1[五代创伤] --> H2[皇帝安全焦虑]
+    H2 --> H3[抑武 · 强中央 · 重文官]
+    H3 --> H4[士大夫文治价值强化]
+    H4 --> H5[商人富民逐利 · 市场繁荣]
+    H5 --> H6[官僚避责 · 执行变形 · 寻租]
+    H6 --> H7[军费压力 · 风险厌恶 · 议和]
+    H7 --> H8[纸币救急 · 专卖加重 · 武将受限]
+    H8 --> H9[短期理性累积 → 长期困局]
+  end
           </pre>
         </div>
       </section>
@@ -99,9 +125,12 @@ flowchart TD
           <h3>时代条件</h3>
           <span class="section-tag">在约束中选择</span>
         </header>
-        <p>任何王朝制度都不是凭空设计，而是在资源禀赋、敌我态势、历史创伤、技术条件与统治集团结构之间做权衡。点击下列卷轴卡片展开详述。</p>
+        <p>任何王朝制度都不是凭空设计，而是在资源禀赋、敌我态势、历史创伤、技术条件与统治集团结构之间做权衡。<strong>点击下列卡片</strong>，展开逻辑完整的说明与史料依据。</p>
+        <aside class="human-callout">
+          <strong>行为线嵌入：</strong>时代条件不仅是客观背景，也塑造人的心理。五代创伤使赵匡胤对武将天然警惕——强干弱枝、重文轻武，是开国集团安全焦虑的制度化表达（详见「五代创伤」卡片末段）。
+        </aside>
         <div id="constraint-grid" class="constraint-grid" role="tablist" aria-label="五项时代约束"></div>
-        <div id="constraint-detail" class="constraint-detail-panel" role="tabpanel"></div>
+        <div id="constraint-detail" class="expand-detail-panel" role="tabpanel" aria-live="polite"></div>
         <div class="lattice-divider" aria-hidden="true"></div>
         <blockquote>
           <strong>史学提示：</strong>「崇文抑武」并非立国之初的明文国策，而是逐步强化的心照不宣潜规则；其目标主要是防范武将威胁政权，而非放弃军事建设。北宋仍维持庞大常备军与巨额军费。
@@ -115,6 +144,9 @@ flowchart TD
           <span class="section-tag">制度风格背后的优先级</span>
         </header>
         <p>「价值观」在此不是道德宣言，而是统治集团在安全、秩序、财富、扩张、控制、合法性之间的排序。</p>
+        <aside class="human-callout">
+          <strong>行为线嵌入：</strong>这一排序也体现士大夫的价值偏好——重文治、名分、秩序与教化，对武力保持警惕。有利于稳定与契约环境，却易轻视军事专业性（详见卷首「价值排序」行与第六章「士大夫的文治价值」）。
+        </aside>
         <ol>
           <li><strong>内部稳定</strong>高于军事冒险</li>
           <li><strong>中央集权</strong>高于地方军事效率</li>
@@ -153,44 +185,15 @@ flowchart TD
           <span class="section-tag">稳定优先 · 市场供血</span>
         </header>
         <div class="strategy-banner reveal">内控武人，外买时间；南取财富，北供边防<br />文官治国，市场供血；货币调度，专卖汲取</div>
+        <p class="table-hint">点击策略表格任一行，展开该维度的完整说明与史料依据。</p>
         <div class="framework-table-wrap">
-          <table class="framework-table">
+          <table class="framework-table framework-table-clickable">
             <thead>
-              <tr><th>维度</th><th>核心逻辑</th><th>主要手段</th><th>代价</th></tr>
+              <tr><th>维度</th><th>核心逻辑</th><th>主要手段</th><th>代价</th><th class="col-hint"></th></tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>政治</td>
-                <td>强干弱枝，防五代化</td>
-                <td>禁军中央化、财权上收、文官外任、转运使监察</td>
-                <td>地方应变弱、冗官冗兵</td>
-              </tr>
-              <tr>
-                <td>经济</td>
-                <td>承认市场，变税基</td>
-                <td>放宽坊市、市舶司、商税、盐茶酒专卖</td>
-                <td>与汲取并存</td>
-              </tr>
-              <tr>
-                <td>财政</td>
-                <td>多元化、货币化</td>
-                <td>田赋 + 商税 + 专卖 + 市舶 + 漕运</td>
-                <td>后期缺硬约束</td>
-              </tr>
-              <tr>
-                <td>金融</td>
-                <td>信用工具调度</td>
-                <td>交子、会子、盐引、茶引、交引铺</td>
-                <td>信用被赤字侵蚀</td>
-              </tr>
-              <tr>
-                <td>外交军事</td>
-                <td>财政换时间</td>
-                <td>岁币、防御工事、边军、外交分化</td>
-                <td>短期理性、长期被动</td>
-              </tr>
-            </tbody>
+            <tbody id="strategy-tbody"></tbody>
           </table>
+          <div id="strategy-detail" class="expand-detail-panel" role="region" aria-live="polite" hidden></div>
         </div>
       </section>
 
@@ -200,8 +203,12 @@ flowchart TD
           <h3>制度递进链</h3>
           <span class="section-tag">互相催化 · 互相锁定</span>
         </header>
-        <p>宋朝制度不是零散拼图，而是一条自我强化的递进链——成功与失败来自同一套逻辑。</p>
+        <p>宋朝制度不是零散拼图，而是一条自我强化的递进链。<strong>点击每一环</strong>，展开完整说明与史料依据。</p>
+        <aside class="human-callout">
+          <strong>行为线嵌入：</strong>链条中官僚并非中性执行机器。考核压力、避责心理与寻租冲动，使青苗法、市易法等好政策在地方变形，专卖制度也易滋生官商勾结（详见第二、三环展开内容）。
+        </aside>
         <div id="chain-flow" class="chain-flow"></div>
+        <div id="chain-detail" class="expand-detail-panel" role="region" aria-live="polite" hidden></div>
         <blockquote>
           <strong>为何长期不崩：</strong>江南经济与市场体系足够强，财政汲取能力强（南宋失北方后仍支撑百余年）。<br />
           <strong>为何终难破局：</strong>外部军事压力与内部组织效率上限，超过该体系的战略转化能力。
@@ -214,8 +221,12 @@ flowchart TD
           <h3>实施效果</h3>
           <span class="section-tag">多维评价</span>
         </header>
-        <p>不能简单说成功或失败——政治稳定成功、经济繁荣成功、财政汲取成功；军事转化不足、金融纪律不足、战略安全失败。</p>
+        <p>不能简单说成功或失败。<strong>点击成效卡片</strong>，展开各维度的完整评价与史料依据。</p>
+        <aside class="human-callout">
+          <strong>行为线嵌入：</strong>军事转化不足不仅来自地缘，也来自武将激励萎缩；经济繁荣的另一面，是商人与富民的逐利、套利与成本转嫁（详见「军事转化」「经济繁荣」卡片展开内容）。
+        </aside>
         <div id="outcome-grid" class="outcome-grid" aria-label="五维成效评分"></div>
+        <div id="outcome-detail" class="expand-detail-panel" role="region" aria-live="polite" hidden></div>
         <div class="lattice-divider" aria-hidden="true"></div>
         <h4 style="font-size:1rem;margin:1.25rem 0 0.5rem;color:var(--mineral-green)">三大成功</h4>
         <ul>
@@ -231,7 +242,37 @@ flowchart TD
         </ul>
       </section>
 
-      <!-- 六、战略逻辑 -->
+      <!-- 六、人的因素 -->
+      <section id="human" class="song-section">
+        <header class="song-section-header">
+          <h3>人的因素与制度运行偏差</h3>
+          <span class="section-tag">主观选择 · 行为线</span>
+        </header>
+        <p>历史不是机器自己运转。制度背后始终有人在<strong>选择、执行、博弈、误判和自我保护</strong>。宋朝的兴盛与困局，可以从皇帝的安全焦虑、士大夫的价值偏好、官僚的激励扭曲、武将的受限心理、商人的逐利理性与民众的承受边界看得更深。</p>
+        <blockquote class="human-quote">
+          宋朝不是「制度好所以富、地缘差所以弱」这么简单；更准确地说，是一群人在特定历史创伤和利益结构下，选择了一种他们认为<strong>最安全、最合理、最可控</strong>的国家运行方式。
+        </blockquote>
+        <p class="table-hint">点击下列卡片，展开各主体的人性逻辑、制度影响与史料依据。</p>
+        <div id="human-grid" class="human-grid"></div>
+        <div id="human-detail" class="expand-detail-panel" role="region" aria-live="polite" hidden></div>
+        <div class="lattice-divider" aria-hidden="true"></div>
+        <h4 class="human-subhead">三层「人」的分析框架</h4>
+        <table class="framework-table human-layer-table">
+          <thead>
+            <tr><th>层次</th><th>代表</th><th>主要影响</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>具体人物</td><td>赵匡胤、神宗、王安石、司马光、岳飞、高宗等</td><td>重大政策选择与历史节点转向</td></tr>
+            <tr><td>阶层群体</td><td>皇帝、士大夫、武将、商人、富民、百姓</td><td>制度偏好、利益博弈、执行效果</td></tr>
+            <tr><td>人性机制</td><td>安全焦虑、避责、逐利、路径依赖、风险厌恶</td><td>制度运行中的长期偏差</td></tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <strong>核心判断：</strong>宋朝的繁荣来自理性选择，困局也来自理性选择的长期累积。制度设计不仅要顺应客观条件，更要约束人的短期冲动、补偿认知局限，把个人理性引导为国家长期理性。
+        </blockquote>
+      </section>
+
+      <!-- 七、战略逻辑 -->
       <section id="logic" class="song-section">
         <header class="song-section-header">
           <h3>战略逻辑</h3>
@@ -242,28 +283,23 @@ flowchart TD
           <button type="button" class="logic-tab" data-tab="wrong" role="tab" aria-selected="false">没做好什么</button>
         </div>
         <div class="logic-panel" data-panel="right" role="tabpanel">
-          <div class="logic-items"></div>
+          <div id="logic-right-list" class="logic-item-list"></div>
         </div>
         <div class="logic-panel" data-panel="wrong" role="tabpanel" hidden>
-          <div class="logic-items"></div>
+          <div id="logic-wrong-list" class="logic-item-list"></div>
         </div>
+        <div id="logic-detail" class="expand-detail-panel" role="region" aria-live="polite" hidden></div>
       </section>
 
-      <!-- 七、现代启示 -->
+      <!-- 八、现代启示 -->
       <section id="modern" class="song-section">
         <header class="song-section-header">
           <h3>现代启示</h3>
           <span class="section-tag">富而难强</span>
         </header>
-        <p>宋朝最重要的启示：<strong>财富是国家能力的基础，不是国家能力本身</strong>。</p>
-        <ul class="insight-list">
-          <li><strong>增长须沉淀为核心能力</strong>——科技、制造、能源、粮食、金融定价、军工供应链、人才组织</li>
-          <li><strong>财政能力与财政纪律一体</strong>——能集中力量，也要有硬约束防透支</li>
-          <li><strong>金融须服务实体与战略</strong>——血液必须滋养肌肉与骨骼，不能自我循环</li>
-          <li><strong>市场活力与国家能力良性互补</strong>——财政压力时不应系统性伤害预期</li>
-          <li><strong>关键安全能力不能长期外包</strong>——开放须建立在底线能力之上</li>
-          <li><strong>文治与武备非零和</strong>——组织理性 + 安全底座 + 经济资源 + 科技跃迁</li>
-        </ul>
+        <p>宋朝最重要的启示：<strong>财富是国家能力的基础，不是国家能力本身</strong>。点击下列卡片展开说明与依据。</p>
+        <div id="insight-grid" class="insight-grid"></div>
+        <div id="insight-detail" class="expand-detail-panel" role="region" aria-live="polite" hidden></div>
       </section>
 
       <!-- 跋 -->
@@ -276,7 +312,8 @@ flowchart TD
           </p>
           <p class="modern-quote">
             以市场创造财富 · 以制度保护信用 · 以财政配置长期能力<br />
-            以科技产业形成硬实力 · 以安全体系守住发展空间
+            以科技产业形成硬实力 · 以安全体系守住发展空间<br />
+            <em>以制度约束人性 · 把短期理性导向长期理性</em>
           </p>
         </div>
       </section>
@@ -290,6 +327,9 @@ flowchart TD
     </p>
   </footer>
 
+  <script src="assets/song-constraint-data.js"></script>
+  <script src="assets/song-expand-data.js"></script>
+  <script src="assets/song-human-data.js"></script>
   <script src="assets/song-dynasty.js"></script>
 </body>
 </html>
