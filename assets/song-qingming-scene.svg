@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8dcc8"/>
+      <stop offset="45%" stop-color="#dcc9a8"/>
+      <stop offset="100%" stop-color="#c4ad88"/>
+    </linearGradient>
+    <linearGradient id="river" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6a8f9e" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#7fa3b0" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#5d8494" stop-opacity="0.45"/>
+    </linearGradient>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5ead8" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#f5ead8" stop-opacity="0.75"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#sky)"/>
+  <!-- distant hills -->
+  <path d="M0 420 Q200 360 400 400 T800 380 T1200 410 T1440 390 L1440 900 L0 900Z" fill="#9aab8a" opacity="0.35"/>
+  <path d="M0 480 Q300 430 600 470 T1100 450 T1440 470 L1440 900 L0 900Z" fill="#7a9478" opacity="0.28"/>
+  <!-- river -->
+  <path d="M-40 520 Q360 500 720 530 T1480 510 L1480 680 Q1080 660 720 690 T-40 670Z" fill="url(#river)"/>
+  <!-- far bank buildings -->
+  <g fill="#8b7355" opacity="0.55">
+    <rect x="80" y="440" width="36" height="28"/><polygon points="98,428 116,440 80,440" fill="#6b5344"/>
+    <rect x="130" y="455" width="28" height="22"/><polygon points="144,445 158,455 130,455" fill="#6b5344"/>
+    <rect x="200" y="430" width="44" height="32"/><polygon points="222,415 244,430 200,430" fill="#5c4a3a"/>
+    <rect x="260" y="448" width="32" height="24"/><polygon points="276,436 292,448 260,448" fill="#6b5344"/>
+    <rect x="1050" y="435" width="40" height="30"/><polygon points="1070,420 1090,435 1050,435" fill="#6b5344"/>
+    <rect x="1100" y="450" width="34" height="26"/><polygon points="1117,438 1134,450 1100,450" fill="#5c4a3a"/>
+    <rect x="1160" y="442" width="48" height="34"/><polygon points="1184,425 1208,442 1160,442" fill="#6b5344"/>
+    <rect x="1220" y="458" width="30" height="22"/><polygon points="1235,447 1250,458 1220,458" fill="#6b5344"/>
+  </g>
+  <!-- Hong Bridge arch -->
+  <g transform="translate(520, 470)">
+    <path d="M0 80 Q200 -30 400 80 L400 95 Q200 10 0 95Z" fill="#7a6b58" opacity="0.7"/>
+    <path d="M20 80 Q200 5 380 80" fill="none" stroke="#5c4f42" stroke-width="3" opacity="0.5"/>
+    <path d="M40 80 Q200 25 360 80" fill="none" stroke="#5c4f42" stroke-width="2" opacity="0.35"/>
+    <rect x="185" y="55" width="30" height="40" fill="#6b5d4a" opacity="0.6"/>
+  </g>
+  <!-- willow trees -->
+  <g fill="#5a7a52" opacity="0.5">
+    <ellipse cx="160" cy="500" rx="28" ry="45"/>
+    <rect x="155" y="500" width="10" height="40" fill="#6b5344"/>
+    <ellipse cx="1280" cy="490" rx="32" ry="50"/>
+    <rect x="1274" y="495" width="12" height="45" fill="#6b5344"/>
+    <ellipse cx="350" cy="510" rx="22" ry="38"/>
+    <rect x="346" y="510" width="8" height="35" fill="#6b5344"/>
+  </g>
+  <!-- near market roofs -->
+  <g opacity="0.65">
+    <rect x="420" y="560" width="50" height="35" fill="#a08060"/>
+    <polygon points="445,545 475,560 415,560" fill="#8b6914"/>
+    <rect x="490" y="575" width="40" height="28" fill="#9a7858"/>
+    <polygon points="510,562 530,575 490,575" fill="#7a5c3a"/>
+    <rect x="550" y="565" width="55" height="38" fill="#a88868"/>
+    <polygon points="577,548 605,565 545,565" fill="#8b6914"/>
+    <rect x="620" y="580" width="38" height="26" fill="#948068"/>
+    <polygon points="639,568 658,580 620,580" fill="#7a5c3a"/>
+    <rect x="680" y="570" width="48" height="32" fill="#a08060"/>
+    <polygon points="704,555 728,570 668,570" fill="#8b6914"/>
+    <rect x="750" y="585" width="42" height="24" fill="#9a7858"/>
+    <polygon points="771,573 792,585 750,585" fill="#7a5c3a"/>
+  </g>
+  <!-- boats -->
+  <g class="boat boat-1" opacity="0.55">
+    <ellipse cx="300" cy="580" rx="35" ry="8" fill="#6b5344"/>
+    <path d="M285 575 L315 575 L310 568 L290 568Z" fill="#8b6914"/>
+    <line x1="300" y1="568" x2="300" y2="552" stroke="#5c4a3a" stroke-width="2"/>
+  </g>
+  <g class="boat boat-2" opacity="0.45">
+    <ellipse cx="900" cy="600" rx="28" ry="7" fill="#6b5344"/>
+    <path d="M888 596 L912 596 L908 590 L892 590Z" fill="#8b6914"/>
+    <line x1="900" y1="590" x2="900" y2="578" stroke="#5c4a3a" stroke-width="2"/>
+  </g>
+  <!-- path / ground -->
+  <path d="M0 640 Q400 620 720 650 T1440 630 L1440 900 L0 900Z" fill="#c9b896" opacity="0.55"/>
+  <path d="M0 700 Q500 680 900 710 T1440 690 L1440 900 L0 900Z" fill="#b8a078" opacity="0.4"/>
+  <!-- mist overlay bottom -->
+  <rect width="1440" height="900" fill="url(#mist)"/>
+</svg>
