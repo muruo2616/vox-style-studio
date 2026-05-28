@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="宋朝国家策略研究：在约束中选择，在繁荣中困局——交互式报告" />
+  <title>宋朝国家策略 · 富而难强</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/song-dynasty.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <header class="song-header">
+    <h1><span class="seal-mini" aria-hidden="true">宋</span>宋朝国家策略</h1>
+    <nav aria-label="站点导航">
+      <a href="index.html">发布入口</a>
+      <a href="#intro">卷首</a>
+      <a href="#conclusion">结语</a>
+    </nav>
+  </header>
+
+  <div id="ink-progress" aria-hidden="true"><div id="ink-progress-bar"></div></div>
+
+  <div class="song-layout">
+    <aside class="song-sidebar" aria-label="章节导航">
+      <p class="song-sidebar-title">目 录</p>
+      <button type="button" class="song-nav-link active" data-section="intro"><span class="chapter-num">卷首</span>摘要与框架</button>
+      <button type="button" class="song-nav-link" data-section="era"><span class="chapter-num">一</span>时代条件</button>
+      <button type="button" class="song-nav-link" data-section="values"><span class="chapter-num">二</span>价值排序</button>
+      <button type="button" class="song-nav-link" data-section="strategy"><span class="chapter-num">三</span>国家策略</button>
+      <button type="button" class="song-nav-link" data-section="chain"><span class="chapter-num">四</span>制度链条</button>
+      <button type="button" class="song-nav-link" data-section="outcome"><span class="chapter-num">五</span>实施效果</button>
+      <button type="button" class="song-nav-link" data-section="logic"><span class="chapter-num">六</span>战略逻辑</button>
+      <button type="button" class="song-nav-link" data-section="modern"><span class="chapter-num">七</span>现代启示</button>
+      <button type="button" class="song-nav-link" data-section="conclusion"><span class="chapter-num">跋</span>结语</button>
+    </aside>
+
+    <main class="song-main">
+      <!-- 卷首 -->
+      <section id="intro" class="song-section">
+        <div class="song-hero">
+          <div class="song-hero-seal" aria-hidden="true">策略</div>
+          <h2>在约束中选择，在繁荣中困局</h2>
+          <p class="subtitle">宋朝最值得研究的，不只是「它为什么有钱」，而是它在特定时代条件下选择了一套清晰的国家策略。</p>
+          <p class="thesis">
+            <strong>文官集权</strong>压住内部分裂 · <strong>市场江南</strong>支撑财政 ·
+            <strong>货币金融</strong>提升调度 · <strong>妥协外交</strong>换取经济空间
+          </p>
+          <div class="song-hero-art" aria-label="书画美学参考">
+            <span class="art-ref-chip">千里江山图 · 石青石绿</span>
+            <span class="art-ref-chip">溪山行旅图 · 水墨绢本</span>
+            <span class="art-ref-chip">清明上河图 · 市井繁荣</span>
+            <span class="art-ref-chip">汝窑天青 · 审美参照</span>
+          </div>
+        </div>
+
+        <div class="painting-strip" aria-label="宋画元素抽象">
+          <figure class="painting-card">
+            <div class="paint-bg paint-qianli"></div>
+            <figcaption class="paint-label"><strong>千里江山图</strong>矿物青绿 · 层峦叠嶂</figcaption>
+          </figure>
+          <figure class="painting-card">
+            <div class="paint-bg paint-xishan"></div>
+            <figcaption class="paint-label"><strong>溪山行旅图</strong>水墨绢本 · 高远构图</figcaption>
+          </figure>
+          <figure class="painting-card">
+            <div class="paint-bg paint-qingming"></div>
+            <figcaption class="paint-label"><strong>清明上河图</strong>市井烟火 · 商业繁荣</figcaption>
+          </figure>
+        </div>
+
+        <div class="framework-table-wrap">
+          <table class="framework-table">
+            <thead>
+              <tr>
+                <th>层次</th>
+                <th>核心问题</th>
+                <th>宋朝的回答</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>时代条件</td><td>面临什么硬约束？</td><td>五代创伤、北方压力、江南崛起、商业成熟、技术扩散</td></tr>
+              <tr><td>价值排序</td><td>统治者优先保什么？</td><td>内部稳定 &gt; 军事冒险；中央集权 &gt; 地方效率</td></tr>
+              <tr><td>制度策略</td><td>用什么工具实现？</td><td>强干弱枝、商税专卖、货币金融、岁币外交</td></tr>
+              <tr><td>制度链条</td><td>各制度如何互相催化？</td><td>反藩镇 → 高成本 → 市场财政 → 金融 → 军事高负荷</td></tr>
+              <tr><td>实施效果</td><td>得失何在？</td><td>政治经济成功；军事转化与信用纪律不足</td></tr>
+              <tr><td>现代启示</td><td>「富而难强」意味什么？</td><td>财富须沉淀为能力、纪律与安全</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mermaid-wrap">
+          <pre class="mermaid">
+flowchart TD
+  A[唐末五代军阀化] --> B[强中央 · 抑武人 · 重文官]
+  B --> C[内部稳定 ↑ 行政成本 ↑]
+  C --> D[财政需求扩大]
+  D --> E[江南 + 商业 + 专卖 + 纸币]
+  E --> F[经济繁荣 · 财政强韧]
+  F --> G{外部军事压力}
+  G --> H[军费 · 岁币 · 冗费]
+  H --> I[加税 · 滥发 · 信用受损]
+  I --> J[富而难强困局]
+          </pre>
+        </div>
+      </section>
+
+      <!-- 一、时代条件 -->
+      <section id="era" class="song-section">
+        <header class="song-section-header">
+          <h3>时代条件</h3>
+          <span class="section-tag">在约束中选择</span>
+        </header>
+        <p>任何王朝制度都不是凭空设计，而是在资源禀赋、敌我态势、历史创伤、技术条件与统治集团结构之间做权衡。点击下列卷轴卡片展开详述。</p>
+        <div id="constraint-grid" class="constraint-grid" role="tablist" aria-label="五项时代约束"></div>
+        <div id="constraint-detail" class="constraint-detail-panel" role="tabpanel"></div>
+        <div class="lattice-divider" aria-hidden="true"></div>
+        <blockquote>
+          <strong>史学提示：</strong>「崇文抑武」并非立国之初的明文国策，而是逐步强化的心照不宣潜规则；其目标主要是防范武将威胁政权，而非放弃军事建设。北宋仍维持庞大常备军与巨额军费。
+        </blockquote>
+      </section>
+
+      <!-- 二、价值排序 -->
+      <section id="values" class="song-section">
+        <header class="song-section-header">
+          <h3>价值排序</h3>
+          <span class="section-tag">制度风格背后的优先级</span>
+        </header>
+        <p>「价值观」在此不是道德宣言，而是统治集团在安全、秩序、财富、扩张、控制、合法性之间的排序。</p>
+        <ol>
+          <li><strong>内部稳定</strong>高于军事冒险</li>
+          <li><strong>中央集权</strong>高于地方军事效率</li>
+          <li><strong>文官治理</strong>高于武人自治</li>
+          <li><strong>财政可持续</strong>高于短期扩张</li>
+          <li><strong>市场活力</strong>可利用，但必须纳入国家监管</li>
+        </ol>
+        <div class="framework-table-wrap">
+          <table class="dynasty-table">
+            <thead>
+              <tr>
+                <th>朝代</th>
+                <th>核心价值</th>
+                <th>制度风格</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>秦汉</td><td>统一、动员、秩序</td><td>编户齐民、郡县、徭役兵役</td></tr>
+              <tr><td>唐前期</td><td>扩张、军事帝国</td><td>均田、府兵、关中本位</td></tr>
+              <tr><td>唐后期</td><td>财政求生</td><td>两税法、藩镇财政</td></tr>
+              <tr class="song-row"><td>宋朝</td><td>内部稳定、市场财政</td><td>重文轻武、商税专卖、货币化</td></tr>
+              <tr><td>明初</td><td>控制、自给</td><td>里甲、户籍、海禁</td></tr>
+              <tr><td>清朝</td><td>大一统、低成本</td><td>轻徭薄赋、旗绿体系</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <blockquote>
+          规律：历史压力决定目标，资源禀赋决定工具，统治集团决定偏好，技术条件决定上限。
+        </blockquote>
+      </section>
+
+      <!-- 三、国家策略 -->
+      <section id="strategy" class="song-section">
+        <header class="song-section-header">
+          <h3>国家策略组合</h3>
+          <span class="section-tag">稳定优先 · 市场供血</span>
+        </header>
+        <div class="strategy-banner">
+          内控武人，外买时间；南取财富，北供边防<br />
+          文官治国，市场供血；货币调度，专卖汲取
+        </div>
+        <div class="framework-table-wrap">
+          <table class="framework-table">
+            <thead>
+              <tr><th>维度</th><th>核心逻辑</th><th>主要手段</th><th>代价</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>政治</td>
+                <td>强干弱枝，防五代化</td>
+                <td>禁军中央化、财权上收、文官外任、转运使监察</td>
+                <td>地方应变弱、冗官冗兵</td>
+              </tr>
+              <tr>
+                <td>经济</td>
+                <td>承认市场，变税基</td>
+                <td>放宽坊市、市舶司、商税、盐茶酒专卖</td>
+                <td>与汲取并存</td>
+              </tr>
+              <tr>
+                <td>财政</td>
+                <td>多元化、货币化</td>
+                <td>田赋 + 商税 + 专卖 + 市舶 + 漕运</td>
+                <td>后期缺硬约束</td>
+              </tr>
+              <tr>
+                <td>金融</td>
+                <td>信用工具调度</td>
+                <td>交子、会子、盐引、茶引、交引铺</td>
+                <td>信用被赤字侵蚀</td>
+              </tr>
+              <tr>
+                <td>外交军事</td>
+                <td>财政换时间</td>
+                <td>岁币、防御工事、边军、外交分化</td>
+                <td>短期理性、长期被动</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 四、制度链条 -->
+      <section id="chain" class="song-section">
+        <header class="song-section-header">
+          <h3>制度递进链</h3>
+          <span class="section-tag">互相催化 · 互相锁定</span>
+        </header>
+        <p>宋朝制度不是零散拼图，而是一条自我强化的递进链——成功与失败来自同一套逻辑。</p>
+        <div id="chain-flow" class="chain-flow"></div>
+        <blockquote>
+          <strong>为何长期不崩：</strong>江南经济与市场体系足够强，财政汲取能力强（南宋失北方后仍支撑百余年）。<br />
+          <strong>为何终难破局：</strong>外部军事压力与内部组织效率上限，超过该体系的战略转化能力。
+        </blockquote>
+      </section>
+
+      <!-- 五、实施效果 -->
+      <section id="outcome" class="song-section">
+        <header class="song-section-header">
+          <h3>实施效果</h3>
+          <span class="section-tag">多维评价</span>
+        </header>
+        <p>不能简单说成功或失败——政治稳定成功、经济繁荣成功、财政汲取成功；军事转化不足、金融纪律不足、战略安全失败。</p>
+        <div id="outcome-grid" class="outcome-grid" aria-label="五维成效评分"></div>
+        <div class="lattice-divider" aria-hidden="true"></div>
+        <h4 style="font-size:1rem;margin:1.25rem 0 0.5rem;color:var(--mineral-green)">三大成功</h4>
+        <ul>
+          <li><strong>避免唐末五代式内部崩裂</strong>——在「防内乱」首要矛盾上完成目标</li>
+          <li><strong>推动古代商业经济高峰</strong>——城市、手工业、海贸、区域市场整合</li>
+          <li><strong>财政体系韧性强</strong>——多元收入 + 文官财政网络 + 漕运</li>
+        </ul>
+        <h4 style="font-size:1rem;margin:1.25rem 0 0.5rem;color:var(--cinnabar)">三大失败</h4>
+        <ul>
+          <li><strong>财富未能转化为军事优势</strong>——地缘 + 组织 + 投入产出不匹配</li>
+          <li><strong>财政压力侵蚀市场与信用</strong>——有创新，缺纪律</li>
+          <li><strong>稳定压倒军事灵活性</strong>——历史创伤造成的路径依赖</li>
+        </ul>
+      </section>
+
+      <!-- 六、战略逻辑 -->
+      <section id="logic" class="song-section">
+        <header class="song-section-header">
+          <h3>战略逻辑</h3>
+          <span class="section-tag">做对与没做好</span>
+        </header>
+        <div class="logic-tabs" role="tablist">
+          <button type="button" class="logic-tab active" data-tab="right" role="tab" aria-selected="true">做对了什么</button>
+          <button type="button" class="logic-tab" data-tab="wrong" role="tab" aria-selected="false">没做好什么</button>
+        </div>
+        <div class="logic-panel" data-panel="right" role="tabpanel">
+          <div class="logic-items"></div>
+        </div>
+        <div class="logic-panel" data-panel="wrong" role="tabpanel" hidden>
+          <div class="logic-items"></div>
+        </div>
+      </section>
+
+      <!-- 七、现代启示 -->
+      <section id="modern" class="song-section">
+        <header class="song-section-header">
+          <h3>现代启示</h3>
+          <span class="section-tag">富而难强</span>
+        </header>
+        <p>宋朝最重要的启示：<strong>财富是国家能力的基础，不是国家能力本身</strong>。</p>
+        <ul class="insight-list">
+          <li><strong>增长须沉淀为核心能力</strong>——科技、制造、能源、粮食、金融定价、军工供应链、人才组织</li>
+          <li><strong>财政能力与财政纪律一体</strong>——能集中力量，也要有硬约束防透支</li>
+          <li><strong>金融须服务实体与战略</strong>——血液必须滋养肌肉与骨骼，不能自我循环</li>
+          <li><strong>市场活力与国家能力良性互补</strong>——财政压力时不应系统性伤害预期</li>
+          <li><strong>关键安全能力不能长期外包</strong>——开放须建立在底线能力之上</li>
+          <li><strong>文治与武备非零和</strong>——组织理性 + 安全底座 + 经济资源 + 科技跃迁</li>
+        </ul>
+      </section>
+
+      <!-- 跋 -->
+      <section id="conclusion" class="song-section">
+        <div class="song-conclusion">
+          <h3>终局判断</h3>
+          <p class="final-quote">
+            一个国家要<strong>富</strong>，必须尊重生产、市场与信用；<br />
+            一个国家要<strong>强</strong>，必须把财富转化为组织、技术、纪律与安全能力。
+          </p>
+          <p class="modern-quote">
+            以市场创造财富 · 以制度保护信用 · 以财政配置长期能力<br />
+            以科技产业形成硬实力 · 以安全体系守住发展空间
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="song-footer">
+    史学研究报告 · 非投资建议 ·
+    <a href="index.html">vox-style-studio</a> ·
+    视觉参考：宋画绢本、千里江山图、清明上河图（元素抽象化）
+  </footer>
+
+  <script src="assets/song-dynasty.js"></script>
+</body>
+</html>

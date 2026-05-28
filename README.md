@@ -8,6 +8,7 @@
 
 - 入口页：`index.html`
 - 交互报告：`clone-robotics-report.html`
+- 宋朝策略报告：`song-dynasty-report.html`（绢本书画美学）
 
 ## 本地预览
 
@@ -32,4 +33,5 @@ python -m http.server 8080
 | `assets/` | 样式、入口脚本、反馈组件 |
 | `docs/` | 发布说明、迁移与配置文档 |
 | `scripts/` | 导出与补丁脚本 |
+| `song-dynasty-report.html` | 宋朝国家策略交互报告（绢本书画美学） |
 | `hermes-*` / `studio/` | 研究工作流与周边素材 |
