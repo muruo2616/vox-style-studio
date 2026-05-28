@@ -50,8 +50,12 @@
     });
   }
 
+  function getSectionEl(id) {
+    return document.querySelector("section.song-section#" + id);
+  }
+
   function sectionAtViewportTop(id) {
-    var el = document.getElementById(id);
+    var el = getSectionEl(id);
     if (!el) return false;
     var top = el.getBoundingClientRect().top;
     var offset = getHeaderOffset();
@@ -82,7 +86,7 @@
   }
 
   function scrollToSection(id, updateHash) {
-    var el = document.getElementById(id);
+    var el = getSectionEl(id);
     if (!el) return;
     forcedSectionId = id;
     navLockUntil = Date.now() + 4000;
@@ -605,7 +609,7 @@
 
   function initHash() {
     var hash = location.hash.replace("#", "");
-    if (hash && document.getElementById(hash)) {
+    if (hash && getSectionEl(hash)) {
       setTimeout(function () {
         scrollToSection(hash, false);
       }, 200);
