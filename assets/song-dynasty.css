@@ -1004,12 +1004,189 @@ body::after {
   vertical-align: top;
 }
 
-/* ── 表格 ── */
+/* ── 报告表格（可抓取 / 无样式可读） ── */
+.report-table,
+.framework-table,
+.dynasty-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.15rem 0;
+  font-size: 0.88rem;
+  table-layout: auto;
+}
+
+.report-table th,
+.report-table td,
+.framework-table th,
+.framework-table td,
+.dynasty-table th,
+.dynasty-table td {
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--gold-line);
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.55;
+  white-space: normal;
+  word-break: normal;
+}
+
+.report-table th,
+.framework-table th,
+.dynasty-table th {
+  background: rgba(74, 122, 98, 0.15);
+  color: var(--jade);
+  font-family: var(--font-title);
+  font-weight: 700;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.logic-chain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.25rem;
+  margin: 0.75rem 0;
+  padding: 0.85rem 0.95rem;
+  background: rgba(255, 252, 242, 0.9);
+  border: 1px solid var(--gold-line);
+  border-radius: 2px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--ink-light);
+}
+
+.logic-chain b {
+  color: var(--gold);
+  font-weight: 700;
+  padding: 0 0.15rem;
+}
+
+.logic-chain-label {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: var(--jade);
+  padding: 0.15rem 0.45rem;
+  border-radius: 2px;
+  margin-right: 0.25rem;
+}
+
+.logic-chain-human .logic-chain-label {
+  background: var(--cinnabar);
+}
+
+.mermaid-diagrams {
+  margin-top: 0.85rem;
+  min-height: 2rem;
+}
+
+.mermaid-diagrams:not(.is-rendered) {
+  opacity: 0.85;
+}
+
+.mermaid-diagrams .mermaid {
+  margin-bottom: 0.75rem;
+  overflow-x: auto;
+}
+
+.evidence-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 1rem 0;
+}
+
+.evidence-card {
+  border: 1px solid var(--gold-line);
+  border-radius: 2px;
+  padding: 0.75rem 0.95rem;
+  background: rgba(255, 252, 242, 0.88);
+}
+
+.evidence-card summary {
+  cursor: pointer;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+
+.evidence-card p {
+  margin: 0.55rem 0 0;
+  font-size: 0.86rem;
+  line-height: 1.65;
+  color: var(--ink-light);
+}
+
+.evidence-cite {
+  font-size: 0.8rem !important;
+  color: var(--ink-faint) !important;
+  border-top: 1px dashed rgba(184, 134, 11, 0.3);
+  padding-top: 0.45rem !important;
+  margin-top: 0.65rem !important;
+}
+
+.key-quote {
+  margin: 1.15rem 0;
+  padding: 0.95rem 1.1rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: center;
+  color: var(--cinnabar);
+  background: rgba(168, 50, 50, 0.06);
+  border: 1px dashed var(--cinnabar);
+  font-family: var(--font-title);
+  letter-spacing: 0.06em;
+}
+
+.chain-static-list {
+  margin: 0.75rem 0 1rem;
+  padding-left: 1.35rem;
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--ink-light);
+}
+
+.chain-static-list li + li {
+  margin-top: 0.35rem;
+}
+
+.outcome-summary-table td:nth-child(2) {
+  white-space: nowrap;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+}
+
+.js-only-hint {
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+.no-js .js-only-hint { display: none; }
+
+/* ── 表格（legacy alias） ── */
 .framework-table-wrap { overflow-x: auto; margin: 1.15rem 0; }
 
 .framework-table, .dynasty-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: 0.88rem;
 }
 
@@ -1020,6 +1197,7 @@ body::after {
   text-align: left;
   vertical-align: top;
   transition: background 0.25s;
+  white-space: normal;
 }
 
 .framework-table th {

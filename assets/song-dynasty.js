@@ -109,7 +109,7 @@
       grid.appendChild(card);
     });
 
-    if (opts.autoFirst !== false && keys[0]) {
+    if (opts.autoFirst === true && keys[0]) {
       var first = grid.querySelector('[data-key="' + keys[0] + '"]');
       if (first) first.click();
     }
@@ -144,8 +144,6 @@
       preset.forEach(function (tr) {
         wireRow(tr, dataMap[tr.getAttribute("data-key")]);
       });
-      var first = tbody.querySelector(".expand-row");
-      if (first) first.click();
       return;
     }
 
@@ -189,9 +187,6 @@
       tbody.appendChild(tr);
       wireRow(tr, data);
     });
-
-    var first = tbody.querySelector(".expand-row");
-    if (first) first.click();
   }
 
   /* ── 各模块初始化 ── */
@@ -251,9 +246,6 @@
       });
       container.appendChild(step);
     });
-
-    var first = container.querySelector(".chain-step");
-    if (first) first.click();
   }
 
   function initOutcomes() {
@@ -296,9 +288,6 @@
     fillList("logic-wrong-list", EXPAND.logicWrong, [
       "stabilityVsFight", "extractVsMarket", "financeVsDiscipline", "economyVsStrategy",
     ]);
-
-    var first = document.querySelector("#logic-right-list .logic-item-btn");
-    if (first) first.click();
   }
 
   function initLogicTabs() {
@@ -315,8 +304,11 @@
           p.hidden = p.getAttribute("data-panel") !== target;
         });
         var listId = target === "right" ? "logic-right-list" : "logic-wrong-list";
-        var first = document.querySelector("#" + listId + " .logic-item-btn");
-        if (first) first.click();
+        var first = document.querySelector("#" + listId + " .logic-item-btn.active");
+        if (!first) {
+          first = document.querySelector("#" + listId + " .logic-item-btn");
+        }
+        /* 不自动展开，保持默认阅读态 */
       });
     });
   }
@@ -528,7 +520,6 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    initMermaid();
     initProgress();
     initNav();
     initFloatingLeaves();
