@@ -36,6 +36,41 @@
   };
 
   var navLockUntil = 0;
+  var forcedSectionId = null;
+
+  function getHeaderOffset() {
+    var root = getComputedStyle(document.documentElement);
+    var h = parseFloat(root.getPropertyValue("--header-h")) || 68;
+    return h + 20;
+  }
+
+  function setNavActive(id) {
+    document.querySelectorAll(".song-nav-link").forEach(function (l) {
+      l.classList.toggle("active", l.getAttribute("data-section") === id);
+    });
+  }
+
+  function sectionAtViewportTop(id) {
+    var el = document.getElementById(id);
+    if (!el) return false;
+    var top = el.getBoundingClientRect().top;
+    var offset = getHeaderOffset();
+    return top <= offset + 30 && top >= offset - 120;
+  }
+
+  function pickSectionByScroll(sections) {
+    var offset = getHeaderOffset();
+    var current = sections[0] ? sections[0].id : "intro";
+    var bestTop = -Infinity;
+    sections.forEach(function (s) {
+      var top = s.getBoundingClientRect().top;
+      if (top <= offset && top > bestTop) {
+        bestTop = top;
+        current = s.id;
+      }
+    });
+    return current;
+  }
 
   function scrollToExpandPanel(panel) {
     if (!panel) return;
@@ -49,10 +84,9 @@
   function scrollToSection(id, updateHash) {
     var el = document.getElementById(id);
     if (!el) return;
-    navLockUntil = Date.now() + 1000;
-    document.querySelectorAll(".song-nav-link").forEach(function (l) {
-      l.classList.toggle("active", l.getAttribute("data-section") === id);
-    });
+    forcedSectionId = id;
+    navLockUntil = Date.now() + 4000;
+    setNavActive(id);
     el.scrollIntoView({ behavior: "smooth", block: "start" });
     if (updateHash !== false) {
       history.replaceState(null, "", "#" + id);
@@ -410,30 +444,29 @@
 
   function initNav() {
     var links = document.querySelectorAll(".song-nav-link");
-    var sections = document.querySelectorAll(".song-section[id]");
+    var sections = Array.prototype.slice.call(document.querySelectorAll(".song-section[id]"));
+
     links.forEach(function (link) {
-      link.addEventListener("click", function () {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
         var id = link.getAttribute("data-section");
         scrollToSection(id, true);
       });
     });
-    if (!sections.length) return;
-    var observer = new IntersectionObserver(
-      function (entries) {
-        if (Date.now() < navLockUntil) return;
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          var id = entry.target.id;
-          links.forEach(function (l) {
-            l.classList.toggle("active", l.getAttribute("data-section") === id);
-          });
-        });
-      },
-      { rootMargin: "-20% 0px -55% 0px", threshold: 0.08 }
-    );
-    sections.forEach(function (s) {
-      observer.observe(s);
-    });
+
+    function updateNavHighlight() {
+      if (forcedSectionId) {
+        setNavActive(forcedSectionId);
+        if (sectionAtViewportTop(forcedSectionId) || Date.now() > navLockUntil) {
+          forcedSectionId = null;
+        }
+        return;
+      }
+      setNavActive(pickSectionByScroll(sections));
+    }
+
+    window.addEventListener("scroll", updateNavHighlight, { passive: true });
+    updateNavHighlight();
   }
 
   function observeReveals() {
@@ -489,11 +522,11 @@
           k.classList.toggle("active", k === kw);
         });
         if (target === "jiangnan") {
-          var card = document.querySelector('.constraint-card[data-key="jiangnan"]');
-          if (card) {
-            card.click();
-            document.getElementById("era").scrollIntoView({ behavior: "smooth" });
-          }
+          scrollToSection("era", true);
+          setTimeout(function () {
+            var card = document.querySelector('.constraint-card[data-key="jiangnan"]');
+            if (card) card.click();
+          }, 500);
           return;
         }
         if (target === "human") {
