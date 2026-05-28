@@ -120,14 +120,43 @@
     var panel = document.getElementById(panelId);
     if (!tbody || !panel) return;
 
+    function wireRow(tr, data) {
+      if (!data || tr.__wired) return;
+      tr.__wired = true;
+      function activate() {
+        tbody.querySelectorAll(".expand-row").forEach(function (r) {
+          r.classList.remove("active");
+        });
+        tr.classList.add("active");
+        showExpandPanel(panel, data, tr, "expand-row");
+      }
+      tr.addEventListener("click", activate);
+      tr.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          activate();
+        }
+      });
+    }
+
+    var preset = tbody.querySelectorAll(".expand-row[data-key]");
+    if (preset.length) {
+      preset.forEach(function (tr) {
+        wireRow(tr, dataMap[tr.getAttribute("data-key")]);
+      });
+      var first = tbody.querySelector(".expand-row");
+      if (first) first.click();
+      return;
+    }
+
     var rows = [
-      { key: rowKeys[0], cells: ["时代条件", "面临什么硬约束？", "五代创伤、北方压力、江南崛起…"] },
-      { key: rowKeys[1], cells: ["价值排序", "统治者优先保什么？", "内部稳定 > 军事冒险…"] },
-      { key: rowKeys[2], cells: ["制度策略", "用什么工具实现？", "强干弱枝、商税专卖…"] },
-      { key: rowKeys[3], cells: ["制度链条", "各制度如何互相催化？", "反藩镇 → 高成本 → 市场财政…"] },
-      { key: rowKeys[4], cells: ["实施效果", "得失何在？", "政治经济成功；军事转化不足…"] },
-      { key: rowKeys[5], cells: ["人的行为线", "谁在执行、博弈？", "皇帝焦虑、官僚变形、武将萎缩…"] },
-      { key: rowKeys[6], cells: ["现代启示", "「富而难强」意味什么？", "财富须沉淀为能力、纪律与安全"] },
+      { key: rowKeys[0], cells: ["时代条件", "面临什么硬约束？", "五代创伤、北方压力、江南崛起…", "决定无法简单复制汉唐"] },
+      { key: rowKeys[1], cells: ["价值排序", "统治者优先保什么？", "内部稳定 > 军事冒险…", "稳定增强，军事效率受限"] },
+      { key: rowKeys[2], cells: ["国家策略", "如何组织资源？", "强干弱枝、商税专卖…", "繁荣与财政压力并存"] },
+      { key: rowKeys[3], cells: ["制度链条", "各制度如何互相催化？", "反藩镇 → 高成本 → 市场财政…", "互相催化，互相锁定"] },
+      { key: rowKeys[4], cells: ["实施效果", "得失何在？", "政治经济成功；军事转化不足…", "典型富而难强"] },
+      { key: rowKeys[5], cells: ["人的行为线", "谁在执行、博弈？", "皇帝焦虑、官僚变形…", "短期理性累积为长期困局"] },
+      { key: rowKeys[6], cells: ["现代启示", "「富而难强」意味什么？", "财富须沉淀为能力、纪律与安全", "制度须约束人性"] },
     ];
 
     if (tbodyId === "strategy-tbody") {
@@ -157,22 +186,8 @@
       hint.className = "row-hint";
       hint.textContent = "展开";
       tr.appendChild(hint);
-
-      function activate() {
-        tbody.querySelectorAll(".expand-row").forEach(function (r) {
-          r.classList.remove("active");
-        });
-        tr.classList.add("active");
-        showExpandPanel(panel, data, tr, "expand-row");
-      }
-      tr.addEventListener("click", activate);
-      tr.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          activate();
-        }
-      });
       tbody.appendChild(tr);
+      wireRow(tr, data);
     });
 
     var first = tbody.querySelector(".expand-row");
@@ -464,7 +479,7 @@
     function boot() {
       if (typeof mermaid === "undefined") return;
       mermaid.initialize({
-        startOnLoad: true,
+        startOnLoad: false,
         theme: "base",
         themeVariables: {
           primaryColor: "#fff8eb",
@@ -476,6 +491,13 @@
           fontFamily: "LXGW WenKai, FangSong, serif",
         },
         flowchart: { curve: "basis", padding: 16 },
+      });
+      mermaid.run({ querySelector: ".mermaid" }).then(function () {
+        document.querySelectorAll(".mermaid-fallback").forEach(function (el) {
+          el.classList.add("mermaid-rendered-hide");
+        });
+      }).catch(function () {
+        /* keep text fallback visible */
       });
     }
     function tryLoad(i) {
