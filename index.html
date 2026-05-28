@@ -2,67 +2,78 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>人形机器人产业链 · 发布入口</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <title>交互报告发布入口 · vox-style-studio</title>
   <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .hub-hero {
+      background: linear-gradient(135deg, #f4ede4 0%, #e8dfd0 100%);
+      border: 1px solid #c4a882;
+      border-radius: 1rem;
+      padding: 1.5rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .hub-hero h2 { margin: 0 0 0.5rem; font-size: 1.25rem; color: #2b2b28; }
+    .hub-hero p { margin: 0 0 1rem; font-size: 0.88rem; color: #5c5a56; line-height: 1.6; }
+    .hub-hero .cta {
+      display: inline-block;
+      padding: 0.55rem 1.1rem;
+      background: #8c2c3b;
+      color: #f4ede4 !important;
+      text-decoration: none;
+      border-radius: 0.35rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .hub-hero .cta:hover { background: #a84552; }
+    .hub-secondary { opacity: 0.95; }
+  </style>
 </head>
 <body>
   <header class="site-header">
-    <h1>人形机器人产业链 <span class="tag">v0.3.6</span></h1>
+    <h1>交互报告发布入口</h1>
     <nav aria-label="报告入口">
+      <a href="song-dynasty-report.html">宋朝策略</a>
       <a href="clone-robotics-report.html#tab=routes">机器人报告</a>
-      <a href="song-dynasty-report.html">宋朝策略报告</a>
-      <a href="clone-robotics-report.md">Markdown 版</a>
-      <a href="docs/release-v0.3.6.md">v0.3.6 发布说明</a>
-      <a href="docs/old-report.html">旧版备份</a>
-      <a href="docs/v0.2-to-v0.3-migration.md">迁移说明</a>
-      <a href="data/components.json">components.json</a>
     </nav>
   </header>
 
   <main>
-    <p class="banner">
-      本页为发布入口：打开
-      <a href="clone-robotics-report.html#tab=routes">人形机器人交互报告 v0.3.6</a>
-      或
-      <a href="song-dynasty-report.html">宋朝国家策略报告</a>（绢本书画美学）。
-      <code>data/*.json</code> 为结构化数据层，<code>docs/old-report.html</code> 仅作为旧版备份。
-    </p>
-
-    <section class="card" aria-labelledby="song-heading" style="border-color:#c4a882;background:linear-gradient(135deg,#fff,#f4ede4)">
+    <section class="hub-hero" aria-labelledby="song-heading">
       <h2 id="song-heading">宋朝国家策略 · 交互报告</h2>
-      <p style="margin:0 0 0.75rem;font-size:0.85rem;color:#5c5a56">
-        绢本配色 · 千里江山图元素 · 侧栏章节导航 · 时代约束卡片 · 制度递进链 · Mermaid 因果图
+      <p>
+        绢本配色 · 千里江山图元素 · 侧栏章节导航 · 时代约束卡片 · 制度递进链 · Mermaid 因果图。
+        <strong>分享请用此链接，不要只用站点根目录。</strong>
+      </p>
+      <a class="cta" href="song-dynasty-report.html">打开宋朝策略报告</a>
+      <p style="margin:0.75rem 0 0;font-size:0.75rem;color:#8a8780">
+        短链：<a href="song/">…/song/</a>（自动跳转）
+      </p>
+    </section>
+
+    <section class="card hub-secondary" aria-labelledby="robot-heading">
+      <h2 id="robot-heading">人形机器人产业链 · v0.3.6</h2>
+      <p style="margin:0 0 0.75rem;font-size:0.85rem;color:#64748b">
+        产业研究交互报告，含 JSON 数据层与 GitHub Issues 反馈。
       </p>
       <p style="margin:0">
-        <a href="song-dynasty-report.html" style="font-weight:600">打开宋朝策略报告 →</a>
+        <a href="clone-robotics-report.html#tab=routes">打开机器人报告 →</a>
       </p>
     </section>
 
-    <section class="card" aria-labelledby="data-heading">
-      <h2 id="data-heading">数据层状态</h2>
+    <section class="card hub-secondary" aria-labelledby="data-heading">
+      <h2 id="data-heading">机器人报告 · 数据层状态</h2>
       <p style="margin:0 0 0.75rem;font-size:0.85rem;color:#64748b">
-        已接入 <strong id="components-count">—</strong> 个零部件（components.json）。其余 JSON 用于后续 Tab 迁移。
+        已接入 <strong id="components-count">—</strong> 个零部件（components.json）。
       </p>
       <div id="data-status">加载中…</div>
-    </section>
-
-    <section class="card" aria-labelledby="routes-heading">
-      <h2 id="routes-heading">技术路线 · 落地预览</h2>
-      <p style="margin:0 0 0.75rem;font-size:0.85rem;color:#64748b">
-        与最新版 <code>#tab=routes</code> 三张洞察卡同源文案；完整 §1–§5 见
-        <a href="clone-robotics-report.html#tab=routes">交互报告 · 技术路线 Tab</a>。
-      </p>
-      <div id="routes-preview"></div>
     </section>
   </main>
 
   <footer>
-    非投资建议 · 数据见 data/ 与 sources.yaml · 发布说明：<a href="docs/release-v0.3.6.md">v0.3.6</a>
+    vox-style-studio · 非投资建议
   </footer>
   <script type="module" src="assets/app.js"></script>
-  <script src="assets/feedback.js"></script>
 </body>
 </html>

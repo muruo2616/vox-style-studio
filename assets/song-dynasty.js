@@ -1,6 +1,9 @@
 (function () {
   "use strict";
 
+  if (window.__SONG_REPORT_INIT__) return;
+  window.__SONG_REPORT_INIT__ = true;
+
   const CONSTRAINTS = {
     wudai: {
       title: "五代创伤",
@@ -216,21 +219,48 @@
   }
 
   function initMermaid() {
-    if (typeof mermaid === "undefined") return;
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: "base",
-      themeVariables: {
-        primaryColor: "#f4ede4",
-        primaryTextColor: "#2b2b28",
-        primaryBorderColor: "#b8956a",
-        lineColor: "#3d6b7a",
-        secondaryColor: "#e8dfd0",
-        tertiaryColor: "#f0e6d8",
-        fontFamily: "Noto Serif SC, serif",
-      },
-      flowchart: { curve: "basis", padding: 16 },
-    });
+    var sources = [
+      "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js",
+      "https://unpkg.com/mermaid@10/dist/mermaid.min.js",
+    ];
+    function boot() {
+      if (typeof mermaid === "undefined") return;
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: "base",
+        themeVariables: {
+          primaryColor: "#f4ede4",
+          primaryTextColor: "#2b2b28",
+          primaryBorderColor: "#b8956a",
+          lineColor: "#3d6b7a",
+          secondaryColor: "#e8dfd0",
+          tertiaryColor: "#f0e6d8",
+          fontFamily: "SimSun, Songti SC, serif",
+        },
+        flowchart: { curve: "basis", padding: 16 },
+      });
+    }
+    function tryLoad(i) {
+      if (typeof mermaid !== "undefined") {
+        boot();
+        return;
+      }
+      if (i >= sources.length) {
+        document.querySelectorAll(".mermaid-wrap pre.mermaid").forEach(function (el) {
+          el.style.whiteSpace = "pre-wrap";
+          el.style.fontFamily = "SimSun, serif";
+        });
+        return;
+      }
+      var s = document.createElement("script");
+      s.src = sources[i];
+      s.onload = boot;
+      s.onerror = function () {
+        tryLoad(i + 1);
+      };
+      document.head.appendChild(s);
+    }
+    tryLoad(0);
   }
 
   function initHash() {

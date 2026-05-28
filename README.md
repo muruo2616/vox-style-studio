@@ -4,11 +4,16 @@
 
 ## 在线访问
 
-发布 GitHub Pages 后，站点根目录为：
+发布 GitHub Pages 后：
 
-- 入口页：`index.html`
-- 交互报告：`clone-robotics-report.html`
-- 宋朝策略报告：`song-dynasty-report.html`（绢本书画美学）
+| 报告 | 链接（分享用这个） |
+|------|-------------------|
+| **宋朝国家策略** | https://muruo2616.github.io/vox-style-studio/song-dynasty-report.html |
+| 宋朝短链（自动跳转） | https://muruo2616.github.io/vox-style-studio/song/ |
+| 发布入口（多报告） | https://muruo2616.github.io/vox-style-studio/ |
+| 人形机器人报告 | https://muruo2616.github.io/vox-style-studio/clone-robotics-report.html |
+
+> 注意：站点根目录 `/` 是**多报告入口**，不是宋朝报告正文。分享宋朝内容请用上面第一或第二条链接。
 
 ## 本地预览
 
