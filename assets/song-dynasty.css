@@ -702,10 +702,6 @@ body::after {
 
 .ref-group li + li { margin-top: 0.25rem; }
 
-.song-section-header h3 {
-  line-height: 1.45;
-}
-
 /* ── 章节 ── */
 .song-section {
   margin-bottom: 2.75rem;
@@ -725,6 +721,7 @@ body::after {
   margin: 0;
   font-family: var(--font-title);
   font-size: 1.5rem;
+  line-height: 1.45;
   font-weight: 700;
   letter-spacing: 0.1em;
 }
