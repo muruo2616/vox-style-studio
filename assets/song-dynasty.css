@@ -849,6 +849,10 @@ body::after {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  scroll-margin-top: calc(var(--header-h) + 24px);
+  position: relative;
+  z-index: 2;
+  clear: both;
 }
 
 .constraint-detail-panel.is-open,
@@ -1181,7 +1185,13 @@ body::after {
 .no-js .js-only-hint { display: none; }
 
 /* ── 表格（legacy alias） ── */
-.framework-table-wrap { overflow-x: auto; margin: 1.15rem 0; }
+.framework-table-wrap {
+  overflow-x: auto;
+  margin: 1.15rem 0;
+  clear: both;
+  position: relative;
+  z-index: 1;
+}
 
 .framework-table, .dynasty-table {
   width: 100%;

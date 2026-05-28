@@ -16,6 +16,49 @@
     人的因素: "human",
   };
 
+  var FRAMEWORK_ROW_SECTION = {
+    era: "era",
+    values: "values",
+    strategy: "strategy",
+    chain: "chain",
+    outcome: "outcome",
+    human: "human",
+    modern: "modern",
+  };
+
+  var FRAMEWORK_ROW_EXPAND = {
+    era: { grid: "constraint-grid", card: "wudai" },
+    strategy: { grid: "strategy-tbody", card: "politics", isRow: true },
+    chain: { chainStep: 0 },
+    outcome: { grid: "outcome-grid", card: "politics" },
+    human: { grid: "human-grid", card: "emperor" },
+    modern: { grid: "insight-grid", card: "i1" },
+  };
+
+  var navLockUntil = 0;
+
+  function scrollToExpandPanel(panel) {
+    if (!panel) return;
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        panel.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  }
+
+  function scrollToSection(id, updateHash) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    navLockUntil = Date.now() + 1000;
+    document.querySelectorAll(".song-nav-link").forEach(function (l) {
+      l.classList.toggle("active", l.getAttribute("data-section") === id);
+    });
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (updateHash !== false) {
+      history.replaceState(null, "", "#" + id);
+    }
+  }
+
   /* ── 通用展开渲染 ── */
   function renderExpandDetail(data) {
     var glyph = data.glyph || "·";
@@ -66,9 +109,7 @@
     void panel.offsetWidth;
     panel.innerHTML = renderExpandDetail(data);
     panel.classList.add("is-open");
-    if (window.matchMedia("(max-width: 860px)").matches) {
-      panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    }
+    scrollToExpandPanel(panel);
   }
 
   function starStr(n) {
@@ -123,11 +164,37 @@
     function wireRow(tr, data) {
       if (!data || tr.__wired) return;
       tr.__wired = true;
+      var rowKey = tr.getAttribute("data-key");
       function activate() {
         tbody.querySelectorAll(".expand-row").forEach(function (r) {
           r.classList.remove("active");
         });
         tr.classList.add("active");
+
+        if (tbodyId === "framework-tbody" && FRAMEWORK_ROW_SECTION[rowKey]) {
+          scrollToSection(FRAMEWORK_ROW_SECTION[rowKey], true);
+          var fx = FRAMEWORK_ROW_EXPAND[rowKey];
+          if (fx) {
+            setTimeout(function () {
+              if (fx.isRow) {
+                var row = document.querySelector(
+                  "#" + fx.grid + ' .expand-row[data-key="' + fx.card + '"]'
+                );
+                if (row) row.click();
+              } else if (typeof fx.chainStep === "number") {
+                var steps = document.querySelectorAll("#chain-flow .chain-step");
+                if (steps[fx.chainStep]) steps[fx.chainStep].click();
+              } else {
+                var card = document.querySelector(
+                  "#" + fx.grid + ' [data-key="' + fx.card + '"]'
+                );
+                if (card) card.click();
+              }
+            }, 450);
+          }
+          return;
+        }
+
         showExpandPanel(panel, data, tr, "expand-row");
       }
       tr.addEventListener("click", activate);
@@ -347,16 +414,13 @@
     links.forEach(function (link) {
       link.addEventListener("click", function () {
         var id = link.getAttribute("data-section");
-        var el = document.getElementById(id);
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-          history.replaceState(null, "", "#" + id);
-        }
+        scrollToSection(id, true);
       });
     });
     if (!sections.length) return;
     var observer = new IntersectionObserver(
       function (entries) {
+        if (Date.now() < navLockUntil) return;
         entries.forEach(function (entry) {
           if (!entry.isIntersecting) return;
           var id = entry.target.id;
@@ -365,7 +429,7 @@
           });
         });
       },
-      { rootMargin: "-18% 0px -58% 0px", threshold: 0 }
+      { rootMargin: "-20% 0px -55% 0px", threshold: 0.08 }
     );
     sections.forEach(function (s) {
       observer.observe(s);
@@ -433,16 +497,13 @@
           return;
         }
         if (target === "human") {
-          var humanSec = document.getElementById("human");
-          if (humanSec) humanSec.scrollIntoView({ behavior: "smooth" });
-          setTimeout(function () {
-            var firstHuman = document.querySelector("#human-grid .human-card");
-            if (firstHuman) firstHuman.click();
-          }, 450);
+          scrollToSection("human", true);
           return;
         }
-        var section = document.getElementById(target);
-        if (section) section.scrollIntoView({ behavior: "smooth" });
+        if (target) {
+          scrollToSection(target, true);
+          return;
+        }
       });
     });
   }
@@ -511,11 +572,10 @@
 
   function initHash() {
     var hash = location.hash.replace("#", "");
-    if (hash) {
-      var el = document.getElementById(hash);
-      if (el) setTimeout(function () {
-        el.scrollIntoView({ behavior: "smooth" });
-      }, 400);
+    if (hash && document.getElementById(hash)) {
+      setTimeout(function () {
+        scrollToSection(hash, false);
+      }, 200);
     }
   }
 
