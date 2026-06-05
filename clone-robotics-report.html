@@ -466,7 +466,7 @@
           <p class="font-semibold text-emerald-900 mb-2">v2.0 更新摘要（2026-06-05）</p>
           <ul class="list-disc pl-5 space-y-1 text-xs">
             <li><strong>整机产品：</strong>Figure 03、1X NEO、UBTECH Walker S2、Unitree G1/R1/H2、Apptronik Apollo、Agility Digit、XPENG IRON、EngineAI T800/SE01、Fourier GR-3、智元、乐聚 Kuavo 等</li>
-            <li><strong>开源生态：</strong>NVIDIA Isaac GR00T、Hugging Face LeRobot、AgiBot World、OpenVLA、Open X-Embodiment、Unitree SDK、Kuavo/OpenLoong</li>
+            <li><strong>开源生态：</strong>NVIDIA Isaac GR00T、Hugging Face LeRobot、AgiBot World、OpenVLA、Kairos 3.0 / ACE ROBOTICS、Open X-Embodiment、Unitree SDK、Kuavo/OpenLoong</li>
             <li><strong>结构拆分：</strong>本体硬件供应链 vs Physical AI 软件栈/数据栈，避免只看执行器低估模型与部署工具</li>
             <li><strong>商业化分层：</strong>发布演示 → 可订购 → 企业试点 → 批量交付 → 规模运营 → 单位经济性</li>
           </ul>
@@ -629,7 +629,7 @@
       <div class="section-card p-5">
         <h2 class="text-lg font-bold text-slate-900 mb-3">报告更新日志</h2>
         <ul class="text-sm text-slate-600 space-y-3">
-          <li><span class="font-mono text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">2026-06-05 v2.0</span> — 融合桌面知识图谱 v2.0：整机产品版图（Figure 03、1X NEO、Walker S2、Unitree G1/R1/H2、Apollo、Digit、XPENG IRON、EngineAI、Fourier GR-3、Kuavo 等）；开源生态（GR00T、LeRobot、AgiBot World、OpenVLA）；本体硬件与 Physical AI 软件栈分层；商业化验证阶梯；中美竞争对照；2026–2028 全球出货情景；§10 关键指标与风险红线更新。</li>
+          <li><span class="font-mono text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">2026-06-05 v2.0</span> — 融合桌面知识图谱 v2.0：整机产品版图（Figure 03、1X NEO、Walker S2、Unitree G1/R1/H2、Apollo、Digit、XPENG IRON、EngineAI、Fourier GR-3、Kuavo 等）；开源生态（GR00T、LeRobot、AgiBot World、OpenVLA、Kairos 3.0）；本体硬件与 Physical AI 软件栈分层；商业化验证阶梯；中美竞争对照；2026–2028 全球出货情景；§10 关键指标与风险红线更新。</li>
           <li><span class="font-mono text-xs bg-slate-100 px-2 py-0.5 rounded">2026-05-26 v0.3.6</span> — 发布前校验：同步 Markdown/HTML 的 Clone Alpha 口径，明确 279 台预购为观察样本而非出货；仿生装配改为待验证映射；补强技术路线阅读框架。</li>
           <li><span class="font-mono text-xs bg-slate-100 px-2 py-0.5 rounded">2026-05-25 v0.3.5</span> — 融合外部产业版图笔记：§4c 执行器/国产化分层、§5 场景成熟度阶梯与 Physical AI 中美对照、供应链预期差提示、§5b 环节研究透镜、§10 关键跟踪指标表、反证与 Kill 联动（订单能见度）；IDC 为主锚，Omdia 等异源数据脚注。</li>
           <li><span class="font-mono text-xs bg-slate-100 px-2 py-0.5 rounded">2026-05-25 v0.3.4</span> — 技术路线 Tab 落地页：「Clone 读法」改为「Clone 观察」；§3 跳转卡标注推荐起点；新增 <code class="text-xs">index.html</code> JSON MVP 壳与 <code class="text-xs">docs/old-report.html</code> 备份。</li>
@@ -1103,6 +1103,7 @@
             <tr class="border-t bg-cyan-50/40"><td class="p-2 font-medium">VLA / 基础模型</td><td class="p-2"><a href="https://developer.nvidia.com/isaac/gr00t" class="text-indigo-600 underline" target="_blank" rel="noopener">NVIDIA Isaac GR00T</a></td><td class="p-2">预训练权重、微调、推理、TensorRT 部署；偏研究与开发者早期使用</td></tr>
             <tr class="border-t bg-cyan-50/40"><td class="p-2 font-medium">机器人学习库</td><td class="p-2"><a href="https://github.com/huggingface/lerobot" class="text-indigo-600 underline" target="_blank" rel="noopener">Hugging Face LeRobot</a></td><td class="p-2">标准化真实机器人数据、策略训练、硬件接口；已支持 Unitree G1 等</td></tr>
             <tr class="border-t bg-cyan-50/40"><td class="p-2 font-medium">数据集 + 模型</td><td class="p-2">AgiBot World · GO-1</td><td class="p-2">百万级轨迹、百台机器人、双臂操作；补齐中国具身数据生态</td></tr>
+            <tr class="border-t bg-cyan-50/40"><td class="p-2 font-medium">世界模型 / 场景数据</td><td class="p-2"><a href="https://github.com/kairos-agi/kairos-sensenova" class="text-indigo-600 underline" target="_blank" rel="noopener">Kairos 3.0</a> · ACE ROBOTICS</td><td class="p-2">商汤 / 大晓机器人发布的跨本体世界模型与 Human-Centric 研发范式；官方强调环境数据采集与人-物-环境交互，作为家庭/服务场景闭环信号，<strong>非</strong>整机交付指标</td></tr>
             <tr class="border-t bg-cyan-50/40"><td class="p-2 font-medium">开源 VLA</td><td class="p-2"><a href="https://openvla.github.io/" class="text-indigo-600 underline" target="_blank" rel="noopener">OpenVLA</a></td><td class="p-2">学术/开发者可复现的视觉语言动作模型路线</td></tr>
             <tr class="border-t"><td class="p-2 font-medium">Middleware</td><td class="p-2"><a href="https://www.ros.org/" class="text-indigo-600 underline" target="_blank" rel="noopener">ROS 2</a></td><td class="p-2">降低整机软件集成成本；生态成熟利好中小整机厂与多机型并行开发</td></tr>
             <tr class="border-t"><td class="p-2 font-medium">Simulation</td><td class="p-2"><a href="https://mujoco.org/" class="text-indigo-600 underline" target="_blank" rel="noopener">MuJoCo</a> · <a href="https://developer.nvidia.com/isaac-sim" class="text-indigo-600 underline" target="_blank" rel="noopener">Isaac Sim/Lab</a></td><td class="p-2">强化学习/控制迭代与 sim-to-real；合成数据缩短感知-操作闭环</td></tr>
@@ -1530,14 +1531,15 @@ flowchart TB
       <p class="text-xs text-slate-600 mb-3">「Physical AI」= 模型（VLA/世界模型）+ 数据闭环 + 端侧算力 + 场景部署的<strong>一体能力</strong>。与 §3b 开源栈、§0 图谱中 Tesla/Figure 节点呼应。</p>
       <pre class="text-[11px] text-slate-700 bg-slate-50 border border-slate-200 rounded-xl p-4 overflow-x-auto leading-relaxed mb-4">维度              美国（reported）                        中国（reported）
 ──────────────────────────────────────────────────────────────────────
-AI 模型            Figure Helix、Tesla FSD 迁移、GR00T、1X Redwood   XPENG VLA、AgiBot GO-1、各家闭源模型
+AI 模型            Figure Helix、Tesla FSD 迁移、GR00T、1X Redwood   XPENG VLA、AgiBot GO-1、Kairos 3.0、各家闭源模型
 芯片/算力          NVIDIA Jetson/Thor、Tesla 自研          昇腾、地平线、国产替代推进
 硬件供应链         高端研发强，制造外包多                   成本、供应链响应、试制速度强
 场景               仓储、汽车工厂、家庭                     工业、商业服务、教育、物流、口岸
-开源生态           LeRobot、GR00T、OpenVLA                  AgiBot World、Kuavo/OpenLoong、Unitree SDK
+开源生态           LeRobot、GR00T、OpenVLA                  AgiBot World、Kairos 3.0、Kuavo/OpenLoong、Unitree SDK
 核心判断           2026 竞争从「走得稳」转向「任务成功率过商业阈值」——可复用数据与模型成为分水岭</pre>
       <p class="text-xs text-amber-800 border-l-4 border-amber-300 pl-3 py-2 bg-amber-50/50 rounded-r-lg mb-3"><strong>对华含义：</strong>短期 A 股主线仍是<strong>零部件定点与量产节拍</strong>（§4c）；若竞争升维到 Physical AI，需额外跟踪「是否有自有 VLA + 真实场景数据」——否则存在<strong>硬件强、软件弱</strong>的结构性折价风险（见 <a href="#s5-invest-lens" class="text-indigo-600 underline">§5b</a>）。</p>
       <p class="text-[11px] text-slate-600 border-l-4 border-cyan-200 pl-3 py-2 bg-cyan-50/40 rounded-r-lg mb-2"><strong>2026-05 更新（reported）：</strong>智平方发布 <a href="https://github.com/AlphaBrainGroup/AlphaBrain" class="text-indigo-600 underline" target="_blank" rel="noopener">AlphaBrain</a> 开源社区（VLA + 世界模型 + RL），见 <a href="#s3b-opensource" class="text-indigo-600 underline">§3b</a>。项目方 benchmark 自述须交叉验证，不改变「追赶」总判断。</p>
+      <p class="text-[11px] text-slate-600 border-l-4 border-sky-200 pl-3 py-2 bg-sky-50/40 rounded-r-lg mb-2"><strong>2025-12 / 2026 开源信号（official/reported）：</strong>商汤与大晓机器人 ACE ROBOTICS 发布 Kairos 3.0 世界模型与 Human-Centric 具身研发范式；官方口径强调环境数据采集、人-物-环境交互与跨本体动作预测。应计入<strong>家庭/服务场景数据闭环</strong>，但不等同家庭商业化交付。</p>
       <p class="text-[11px] text-slate-600 border-l-4 border-amber-200 pl-3 py-2 bg-amber-50/40 rounded-r-lg mb-6"><strong>消费级 C 端（media/reported，2026-05）：</strong>蔚蓝科技 <strong>BabyAlpha</strong> 系列累计 <strong>2.5万+</strong> 台、家庭用户约 <strong>90%</strong>（官方/媒体）；<strong>A3</strong> 已发布、<strong>Q3 上市</strong>待交付。与宇树 IDC「全品类出货」<strong>勿直接比排名</strong>。端侧异构算力、感知参数为<strong>官方称</strong>，须第三方复现；<strong>非</strong> A 股供应链主线。</p>
 
       <h3 class="text-lg font-bold mb-3">全球整机参考 · 与 §3 路线对照</h3>
@@ -1574,8 +1576,8 @@ AI 模型            Figure Helix、Tesla FSD 迁移、GR00T、1X Redwood   XPEN
             <tbody class="text-slate-700">
               <tr class="border-t"><td class="p-2 font-mono">L0</td><td class="p-2">硬实时控制</td><td class="p-2">平衡、避障、力控、跌倒保护</td><td class="p-2">Unitree、Boston Dynamics、Tesla、Agility</td></tr>
               <tr class="border-t"><td class="p-2 font-mono">L1</td><td class="p-2">技能策略</td><td class="p-2">抓取、搬运、整理、开门、上下料</td><td class="p-2">LeRobot、GR00T、OpenVLA、各家闭源策略</td></tr>
-              <tr class="border-t"><td class="p-2 font-mono">L2</td><td class="p-2">VLA/基础模型</td><td class="p-2">语言、视觉、动作联合建模</td><td class="p-2">Figure Helix、NVIDIA GR00T、OpenVLA、XPENG VLA、AgiBot GO-1</td></tr>
-              <tr class="border-t"><td class="p-2 font-mono">L3</td><td class="p-2">数据闭环</td><td class="p-2">示教、遥操作、仿真、合成数据、失败样本回流</td><td class="p-2">AgiBot World、Open X-Embodiment、LeRobotDataset、1X Expert Mode</td></tr>
+              <tr class="border-t"><td class="p-2 font-mono">L2</td><td class="p-2">VLA/基础模型</td><td class="p-2">语言、视觉、动作联合建模</td><td class="p-2">Figure Helix、NVIDIA GR00T、OpenVLA、XPENG VLA、AgiBot GO-1、Kairos 3.0</td></tr>
+              <tr class="border-t"><td class="p-2 font-mono">L3</td><td class="p-2">数据闭环</td><td class="p-2">示教、遥操作、仿真、合成数据、失败样本回流、环境数据采集</td><td class="p-2">AgiBot World、Kairos 3.0 / ACE、Open X-Embodiment、LeRobotDataset、1X Expert Mode</td></tr>
               <tr class="border-t"><td class="p-2 font-mono">L4</td><td class="p-2">场景编排</td><td class="p-2">多机器人调度、WMS/MES 集成、权限与安全</td><td class="p-2">Agility Arc、UBTECH BrainNet 2.0/Co-Agent</td></tr>
             </tbody>
           </table>
@@ -1844,7 +1846,7 @@ AI 模型            Figure Helix、Tesla FSD 迁移、GR00T、1X Redwood   XPEN
               <tr class="border-t"><td class="p-2 font-medium">机器人小时成本</td><td class="p-2">全行业待验证</td><td class="p-2">含折旧、维护、遥操作后低于人工</td></tr>
               <tr class="border-t"><td class="p-2 font-medium">遥操作/监督占比</td><td class="p-2">头部仍较高</td><td class="p-2">持续下降 → 模型泛化真实进步</td></tr>
               <tr class="border-t"><td class="p-2 font-medium">维护间隔 MTBF</td><td class="p-2">演示机水平</td><td class="p-2">关节/手部寿命提升 → 从演示到生产工具</td></tr>
-              <tr class="border-t"><td class="p-2 font-medium">开源数据增长</td><td class="p-2">AgiBot World、LeRobot 等</td><td class="p-2">高质量真实轨迹持续增加 → 模型迭代速度</td></tr>
+              <tr class="border-t"><td class="p-2 font-medium">开源数据增长</td><td class="p-2">AgiBot World、Kairos 3.0、LeRobot 等</td><td class="p-2">高质量真实轨迹与环境交互数据持续增加 → 模型迭代速度</td></tr>
               <tr class="border-t"><td class="p-2 font-medium">大客户复购</td><td class="p-2">试点为主</td><td class="p-2">试点客户追加订单 → 商业价值强证据</td></tr>
             </tbody>
           </table>
@@ -1869,7 +1871,7 @@ AI 模型            Figure Helix、Tesla FSD 迁移、GR00T、1X Redwood   XPEN
               <tr class="border-t"><td class="p-2 font-medium">订单/客户集中度风险</td><td class="p-2">单一大客户砍单或转移供应链</td><td class="p-2">单客户链敞口&gt;30% 时强制再平衡</td></tr>
               <tr class="border-t"><td class="p-2 font-medium">国产替代慢于预期</td><td class="p-2">谐波/丝杠仍依赖进口且价差未收敛</td><td class="p-2">下调零部件渗透率假设与 TAM</td></tr>
               <tr class="border-t"><td class="p-2 font-medium">订单能见度落空</td><td class="p-2">叙事热度高但 Tier1 大额订单/财报收入长期缺席</td><td class="p-2">收缩主题模拟权重；复核 §5 预期差</td></tr>
-              <tr class="border-t"><td class="p-2 font-medium">Physical AI 差距拉大</td><td class="p-2">中国整机缺乏可验证 VLA + 场景数据闭环</td><td class="p-2">降权纯代工映射；提高软件/数据标的权重上限</td></tr>
+              <tr class="border-t"><td class="p-2 font-medium">Physical AI 差距拉大</td><td class="p-2">中国整机缺乏可验证 VLA + 场景数据闭环；或 Kairos / AgiBot 等数据栈无法转化为任务成功率</td><td class="p-2">降权纯代工映射；提高软件/数据标的权重上限</td></tr>
             </tbody>
           </table>
         </div>

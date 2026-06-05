@@ -233,6 +233,44 @@
       "evidenceLevel": "reported",
       "summary": "开源人形平台；教育/科研/ROS 国产生态适配。",
       "section": "#s5"
+    },
+    {
+      "id": "ace-kairos",
+      "label": "大晓机器人 ACE / Kairos 3.0",
+      "kind": "platform",
+      "tier": 2,
+      "route": [
+        "service",
+        "software"
+      ],
+      "segment": [
+        "world-model",
+        "embodied-data",
+        "open-source"
+      ],
+      "evidenceLevel": "official",
+      "summary": "商汤 / 大晓机器人发布 Kairos 3.0 世界模型与 Human-Centric 具身研发范式；官方强调环境数据采集、人-物-环境交互与跨本体动作预测，适合作为家庭/服务场景数据闭环信号，非整机交付指标。",
+      "sources": [
+        {
+          "title": "SenseTime official news",
+          "url": "https://www.sensetime.com/en/news-detail/51170348?categoryId=1072",
+          "tier": 1,
+          "date": "2025-12-18"
+        },
+        {
+          "title": "Kairos 3.0 official GitHub",
+          "url": "https://github.com/kairos-agi/kairos-sensenova",
+          "tier": 1,
+          "date": "2026"
+        },
+        {
+          "title": "Kairos Sensenova Hugging Face",
+          "url": "https://huggingface.co/kairos-agi/kairos-sensenova-common",
+          "tier": 1,
+          "date": "2026"
+        }
+      ],
+      "section": "#s3b-opensource"
     }
   ]
 }

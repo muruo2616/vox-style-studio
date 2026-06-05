@@ -71,6 +71,38 @@
           "tier": "media"
         }
       ]
+    },
+    {
+      "id": "feed-2026-003",
+      "createdAt": "2026-06-05T00:00:00.000Z",
+      "source": "manual",
+      "feedbackType": "来源补充",
+      "evidence": "official",
+      "status": "accepted",
+      "summary": "补充大晓机器人 ACE / Kairos 3.0：世界模型、环境数据采集与家庭/服务场景闭环信号",
+      "detail": "核验商汤官网新闻、kairos-agi/kairos-sensenova 官方 GitHub 与 Hugging Face 模型页。将其作为 Physical AI 软件栈、世界模型与场景数据闭环节点纳入；不写成整机交付或家庭商业化已兑现。",
+      "pageUrl": "https://muruo2616.github.io/vox-style-studio/clone-robotics-report.html#s3b-opensource",
+      "tab": "routes",
+      "reportVersion": "v2.0",
+      "targetFiles": ["clone-robotics-report.html", "data/nodes.json", "data/update-feed.json"],
+      "reviewNotes": "2026-06-05 已纳入 §3b 开源栈、§5a Physical AI、§5a′ 软件栈、§5b 风险与数据闭环判断；证据级别 official，商业化口径保持克制。",
+      "sources": [
+        {
+          "title": "SenseTime official news",
+          "url": "https://www.sensetime.com/en/news-detail/51170348?categoryId=1072",
+          "tier": "official"
+        },
+        {
+          "title": "Kairos 3.0 official GitHub",
+          "url": "https://github.com/kairos-agi/kairos-sensenova",
+          "tier": "official"
+        },
+        {
+          "title": "Kairos Sensenova Hugging Face",
+          "url": "https://huggingface.co/kairos-agi/kairos-sensenova-common",
+          "tier": "official"
+        }
+      ]
     }
   ]
 }
