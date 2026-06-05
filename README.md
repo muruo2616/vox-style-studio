@@ -33,7 +33,7 @@ python -m http.server 8080
 
 | 路径 | 说明 |
 |------|------|
-| `clone-robotics-report.html` | 主报告（v0.3.6） |
+| `clone-robotics-report.html` | 主报告（v2.0） |
 | `data/` | 结构化 JSON 数据 |
 | `assets/` | 样式、入口脚本、反馈组件 |
 | `docs/` | 发布说明、迁移与配置文档 |

@@ -1,16 +1,24 @@
 {
-  "version": "0.3",
-  "updated": "2026-05-27",
+  "version": "2.0",
+  "updated": "2026-06-05",
   "nodes": [
     {
       "id": "figure",
       "label": "Figure AI",
       "kind": "anchor1",
       "tier": 1,
-      "route": ["electric"],
+      "route": [
+        "electric"
+      ],
       "evidenceLevel": "reported",
-      "summary": "BotQ 量产：350+ 台 Figure 03 已下线/交付（figure.ai）；需区分内部部署 vs 商业交付 vs 财务确认。BMW 等工厂试点仍并行。",
-      "sources": [{ "title": "Figure.ai", "tier": 2, "date": "2025-2026" }],
+      "summary": "Figure 03 + Helix；产品叙事领先，非结构化家庭环境成功率、遥操作占比、成本待跟踪。",
+      "sources": [
+        {
+          "title": "Figure.ai",
+          "tier": 2,
+          "date": "2025-2026"
+        }
+      ],
       "section": "#s1"
     },
     {
@@ -18,10 +26,18 @@
       "label": "Tesla Optimus",
       "kind": "anchor1",
       "tier": 1,
-      "route": ["electric"],
+      "route": [
+        "electric"
+      ],
       "evidenceLevel": "reported",
       "summary": "Gen3 · Fremont 7–8 月试产（Q1 2026 业绩会）；Model S/X 产线改造中。初期产出 quite slow。",
-      "sources": [{ "title": "Tesla Q1 2026 call", "tier": 2, "date": "2026-Q1" }],
+      "sources": [
+        {
+          "title": "Tesla Q1 2026 call",
+          "tier": 2,
+          "date": "2026-Q1"
+        }
+      ],
       "section": "#s1"
     },
     {
@@ -29,10 +45,18 @@
       "label": "优必选",
       "kind": "anchor1",
       "tier": 1,
-      "route": ["electric"],
+      "route": [
+        "electric"
+      ],
       "evidenceLevel": "reported",
       "summary": "2025 全尺寸工业人形交付 1079 台；具身智能营收 8.2 亿（+22×）；9880.HK。",
-      "sources": [{ "title": "年报/港交所", "tier": 1, "date": "2025" }],
+      "sources": [
+        {
+          "title": "年报/港交所",
+          "tier": 1,
+          "date": "2025"
+        }
+      ],
       "section": "#s1"
     },
     {
@@ -40,11 +64,25 @@
       "label": "宇树 Unitree",
       "kind": "anchor2",
       "tier": 2,
-      "route": ["electric", "service"],
+      "route": [
+        "electric",
+        "service"
+      ],
       "evidenceLevel": "reported",
       "summary": "2025 出货 reported 5500+，需核验是否为人形单独口径、四足+人形合计或产品线统计；2026 目标 1–2 万台（公司披露）。",
-      "ship2025": { "reported": "5500+", "humanoid": null, "quadruped": null, "note": "口径待交叉验证：人形单独 vs 四足+人形合计 vs 产品线统计" },
-      "sources": [{ "title": "IDC", "tier": 2, "date": "2025" }],
+      "ship2025": {
+        "reported": "5500+",
+        "humanoid": null,
+        "quadruped": null,
+        "note": "口径待交叉验证：人形单独 vs 四足+人形合计 vs 产品线统计"
+      },
+      "sources": [
+        {
+          "title": "IDC",
+          "tier": 2,
+          "date": "2025"
+        }
+      ],
       "section": "#s1"
     },
     {
@@ -52,10 +90,18 @@
       "label": "智元 Agibot",
       "kind": "anchor2",
       "tier": 2,
-      "route": ["electric"],
+      "route": [
+        "electric"
+      ],
       "evidenceLevel": "reported",
       "summary": "2025 出货 5100+；2026-03 第 10000 台通用具身机器人下线；GO-1/GO-2 基座大模型。",
-      "sources": [{ "title": "官方下线仪式", "tier": 2, "date": "2026-03" }],
+      "sources": [
+        {
+          "title": "官方下线仪式",
+          "tier": 2,
+          "date": "2026-03"
+        }
+      ],
       "section": "#s1"
     },
     {
@@ -63,10 +109,18 @@
       "label": "蔚蓝科技",
       "kind": "anchor2",
       "tier": 2,
-      "route": ["service"],
+      "route": [
+        "service"
+      ],
       "evidenceLevel": "reported",
       "summary": "消费级四足 BabyAlpha reported 累计 2.5万+ 台（2026-05 官方/媒体）；家庭用户约 90%。A3 发布，Q3 上市待交付验证。",
-      "sources": [{ "title": "公司发布/财经媒体", "tier": 2, "date": "2026-05" }],
+      "sources": [
+        {
+          "title": "公司发布/财经媒体",
+          "tier": 2,
+          "date": "2026-05"
+        }
+      ],
       "section": "#s5"
     },
     {
@@ -74,10 +128,18 @@
       "label": "Clone Robotics",
       "kind": "anchor1",
       "tier": 1,
-      "route": ["bionic"],
+      "route": [
+        "bionic"
+      ],
       "evidenceLevel": "verified",
       "summary": "波兰仿生液压整机；Alpha 279 台限量预售，Protoclone 仍悬挂原型。",
-      "sources": [{ "title": "Clone Robotics 官网", "tier": 1, "date": "2025" }],
+      "sources": [
+        {
+          "title": "Clone Robotics 官网",
+          "tier": 1,
+          "date": "2025"
+        }
+      ],
       "section": "#s2"
     },
     {
@@ -85,8 +147,12 @@
       "label": "绿的谐波",
       "kind": "supplier",
       "tier": 1,
-      "route": ["electric"],
-      "segment": ["reducer"],
+      "route": [
+        "electric"
+      ],
+      "segment": [
+        "reducer"
+      ],
       "evidenceLevel": "verified",
       "orderStatus": "pending",
       "section": "#s6"
@@ -96,12 +162,77 @@
       "label": "立讯精密",
       "kind": "supplier",
       "tier": 1,
-      "route": ["electric"],
-      "segment": ["oem"],
+      "route": [
+        "electric"
+      ],
+      "segment": [
+        "oem"
+      ],
       "evidenceLevel": "reported",
       "orderStatus": "pending",
       "summary": "2025 机构调研预计出货约 3000 台；待财报验证",
       "section": "#s6"
+    },
+    {
+      "id": "apptronik",
+      "label": "Apptronik Apollo",
+      "kind": "anchor2",
+      "tier": 2,
+      "route": [
+        "electric"
+      ],
+      "evidenceLevel": "reported",
+      "summary": "仓储/制造/物流企业试点；4h 热插拔电池、模块化部署。",
+      "section": "#s5"
+    },
+    {
+      "id": "engineai",
+      "label": "EngineAI T800",
+      "kind": "anchor2",
+      "tier": 2,
+      "route": [
+        "electric"
+      ],
+      "evidenceLevel": "reported",
+      "summary": "2026 T800 交付信号增强；首批交付后任务能力与安全边界待验证。",
+      "section": "#s5"
+    },
+    {
+      "id": "xpeng-iron",
+      "label": "XPENG IRON",
+      "kind": "anchor2",
+      "tier": 2,
+      "route": [
+        "electric"
+      ],
+      "evidenceLevel": "reported",
+      "summary": "车企 Physical AI 延伸；计划 2026 量产，车端 VLA/芯片/供应链复用降本。",
+      "section": "#s5"
+    },
+    {
+      "id": "fourier",
+      "label": "Fourier GR-3",
+      "kind": "anchor2",
+      "tier": 2,
+      "route": [
+        "electric",
+        "service"
+      ],
+      "evidenceLevel": "reported",
+      "summary": "康养/陪伴/服务；GR-3 强调护理与多模态交互。",
+      "section": "#s5"
+    },
+    {
+      "id": "kuavo",
+      "label": "乐聚 Kuavo",
+      "kind": "anchor2",
+      "tier": 2,
+      "route": [
+        "electric"
+      ],
+      "evidenceLevel": "reported",
+      "summary": "开源人形平台；教育/科研/ROS 国产生态适配。",
+      "section": "#s5"
     }
   ]
 }

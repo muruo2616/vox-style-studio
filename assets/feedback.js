@@ -1,5 +1,5 @@
 (function () {
-  const REPORT_VERSION = "v0.3.6";
+  const REPORT_VERSION = "v2.0";
   const DEFAULT_CONFIG = {
     enabled: true,
     provider: "github-issues",
